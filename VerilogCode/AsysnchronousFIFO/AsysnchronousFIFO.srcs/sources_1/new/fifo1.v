@@ -49,4 +49,6 @@ module fifo1   #(parameter DSIZE = 8,
 						  .wclk(wclk),
                           .wrst_n(wrst_n)
 						  );
+	SevenSegmentDisplayController zero(clk, reset, 32'hFEDC_BA98, 
+                                      a, b, c, d, e, f, g, anode);
 endmodule
