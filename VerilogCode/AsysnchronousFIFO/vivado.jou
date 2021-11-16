@@ -11,3 +11,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.xpr
+add_files -norecurse {C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/SevenSegmentDisplayController.v C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelClock.v C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v}
