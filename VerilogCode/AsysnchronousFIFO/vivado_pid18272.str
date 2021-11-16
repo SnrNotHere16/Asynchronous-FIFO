@@ -1,0 +1,120 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 18272
+License: Customer
+
+Current time: 	Mon Nov 15 21:26:35 PST 2021
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 150
+Available screens: 1
+Available disk space: 43 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=18
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	OAkun
+User home directory: C:/Users/OAkun
+User working directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/vivado.log
+Vivado journal file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/vivado.jou
+Engine tmp dir: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/.Xil/Vivado-18272-DESKTOP-NDOLUA7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 594 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\VerilogCode\AsysnchronousFIFO\AsysnchronousFIFO.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 635 MB. GUI used memory: 53 MB. Current time: 11/15/21, 9:26:37 PM PST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/OAkun/AsysnchronousFIFO' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+63954kb) [00:00:18]
+// [Engine Memory]: 762 MB (+647834kb) [00:00:18]
+// [GUI Memory]: 75 MB (+9235kb) [00:00:18]
+// [GUI Memory]: 101 MB (+22759kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  3468 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Project name: AsysnchronousFIFO; location: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 804.758 ; gain = 176.484 
+dismissDialog("Open Project"); // by (cl)
+// [Engine Memory]: 803 MB (+2762kb) [00:00:24]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (F, cl)
+// PAPropertyPanels.initPanels (NEXYS4DDR.xdc) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, NEXYS4DDR.xdc]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, NEXYS4DDR.xdc]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("NEXYS4DDR.xdc", 136, 66); // cl (w, cl)
+selectCodeEditor("NEXYS4DDR.xdc", 135, 66, false, false, false, true, false); // cl (w, cl) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ah (an, Popup.HeavyWeightWindow)
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 106 MB (+413kb) [00:00:42]
+// [GUI Memory]: 113 MB (+1321kb) [00:00:45]
