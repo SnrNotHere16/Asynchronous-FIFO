@@ -19,10 +19,11 @@ module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
                            wire wclk;
 
 
-//    fifo1 one(.rdata(rdata), .wfull(wfull), .rempty(rempty),
-//              .wdata(wdata), .winc(winc), .wrst_n(wrst_n), .rinc(rinc), .rrst_n(rrst_n),
-//              .wclk(), .rclk());
     SevenSegmentDisplayController zero(clk, reset, {24'h0000_00,rdata}, 
                                       a, b, c, d, e, f, g, anode);
     clkdiv one (.clk(clk), .reset(reset), .tick(wclk));
+
+    fifo1 two(.rdata(rdata), .wfull(wfull), .rempty(rempty),
+              .wdata(wdata), .winc(winc), .wrst_n(wrst_n), .rinc(rinc), .rrst_n(rrst_n),
+              .wclk(wclk), .rclk(clk));
 endmodule
