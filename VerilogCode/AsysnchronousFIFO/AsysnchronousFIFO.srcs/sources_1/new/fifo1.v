@@ -3,12 +3,12 @@ module fifo1   #(parameter DSIZE = 8,
     (output [DSIZE-1:0] rdata,
      output wfull,
      output rempty,
-     output a,b,c,d,e,f,g,
-     output [7:0] anode,
+     //output a,b,c,d,e,f,g,
+     //output [7:0] anode,
      input [DSIZE-1:0] wdata,
      input winc, wclk, wrst_n,
-     input rinc, rclk, rrst_n,
-     input reset, clk);
+     input rinc, rclk, rrst_n);
+    // input reset, clk);
 
      wire [ASIZE-1:0] waddr, raddr;
 	   wire [ASIZE:0] wptr, rptr, wq2_rptr, rq2_wptr;
@@ -52,6 +52,4 @@ module fifo1   #(parameter DSIZE = 8,
 						  .wclk(wclk),
                           .wrst_n(wrst_n)
 						  );
-	SevenSegmentDisplayController zero(clk, reset, 32'hFEDC_BA98, 
-                                      a, b, c, d, e, f, g, anode);
 endmodule
