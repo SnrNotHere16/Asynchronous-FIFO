@@ -1,28 +1,25 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
-// 
-// Create Date: 11/16/2021 04:04:33 PM
-// Design Name: 
-// Module Name: AsynchronousFIFOTop
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module AsynchronousFIFOTop();
+module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
+                          (
+                           output wfull,
+                           output rempty,
+                           output a,b,c,d,e,f,g,
+                           output [7:0] anode,
+                           input clk, reset, //master clk 100MHz
+                           input [DSIZE-1:0] wdata,
+                           input winc, wrst_n, //wclk
+                           input rinc, rrst_n );//rclk
+                           wire [DSIZE-1:0] rdata; 
     
-    fifo1 one();
-    SevenSegmentDisplayController zero(clk, reset, 32'hFEDC_BA98, 
+//    fifo1 one(.rdata(rdata), .wfull(wfull), .rempty(rempty),
+//              .wdata(wdata), .winc(winc), .wrst_n(wrst_n), .rinc(rinc), .rrst_n(rrst_n),
+//              .wclk(), .rclk());
+    SevenSegmentDisplayController zero(clk, reset, {24'h1111_11,rdata}, 
                                       a, b, c, d, e, f, g, anode);
 endmodule
