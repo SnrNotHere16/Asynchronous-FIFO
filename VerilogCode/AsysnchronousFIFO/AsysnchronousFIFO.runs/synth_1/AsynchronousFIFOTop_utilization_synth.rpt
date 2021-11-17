@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Nov 16 17:18:32 2021
+| Date         : Tue Nov 16 17:41:15 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file AsynchronousFIFOTop_utilization_synth.rpt -pb AsynchronousFIFOTop_utilization_synth.pb
 | Design       : AsynchronousFIFOTop
@@ -146,7 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |   67 |                 LUT |
+| LUT2     |   66 |                 LUT |
 | FDCE     |   36 |        Flop & Latch |
 | CARRY4   |   20 |          CarryLogic |
 | OBUF     |   15 |                  IO |

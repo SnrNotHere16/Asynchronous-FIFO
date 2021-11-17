@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Nov 16 17:19:14 2021
+| Date         : Tue Nov 16 17:42:02 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file AsynchronousFIFOTop_utilization_placed.rpt -pb AsynchronousFIFOTop_utilization_placed.pb
 | Design       : AsynchronousFIFOTop
@@ -67,13 +67,13 @@ Table of Contents
 +------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                | Used | Fixed | Available | Util% |
 +------------------------------------------+------+-------+-----------+-------+
-| Slice                                    |   24 |     0 |     15850 |  0.15 |
-|   SLICEL                                 |   16 |     0 |           |       |
+| Slice                                    |   22 |     0 |     15850 |  0.14 |
+|   SLICEL                                 |   14 |     0 |           |       |
 |   SLICEM                                 |    8 |     0 |           |       |
 | LUT as Logic                             |   55 |     0 |     63400 |  0.09 |
 |   using O5 output only                   |    0 |       |           |       |
-|   using O6 output only                   |   33 |       |           |       |
-|   using O5 and O6                        |   22 |       |           |       |
+|   using O6 output only                   |   34 |       |           |       |
+|   using O5 and O6                        |   21 |       |           |       |
 | LUT as Memory                            |    0 |     0 |     19000 |  0.00 |
 |   LUT as Distributed RAM                 |    0 |     0 |           |       |
 |   LUT as Shift Register                  |    0 |     0 |           |       |
@@ -172,7 +172,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |   67 |                 LUT |
+| LUT2     |   66 |                 LUT |
 | FDCE     |   36 |        Flop & Latch |
 | CARRY4   |   20 |          CarryLogic |
 | OBUF     |   15 |                  IO |

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Nov 16 17:17:54 2021
-# Process ID: 19636
+# Start of session at: Tue Nov 16 17:40:14 2021
+# Process ID: 18212
 # Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.runs/synth_1
 # Command line: vivado.exe -log AsynchronousFIFOTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AsynchronousFIFOTop.tcl
 # Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.runs/synth_1/AsynchronousFIFOTop.vds
