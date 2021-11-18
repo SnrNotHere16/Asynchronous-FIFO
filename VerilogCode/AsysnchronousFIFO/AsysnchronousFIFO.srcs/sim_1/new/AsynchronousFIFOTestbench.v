@@ -21,6 +21,8 @@
 
 
 module AsynchronousFIFOTestbench();
+        parameter DSIZE = 8;
+        parameter ASIZE = 4;
         reg clk, reset; 
         reg winc, wrst_n; 
         reg rinc, rrst_n; 
@@ -30,7 +32,7 @@ module AsynchronousFIFOTestbench();
         wire [7:0] anode; 
         
             
-        AsynchronousFIFOTop dut (.wfull(wfull), .rempty(rempty), 
+        AsynchronousFIFOTop  #(DSIZE, ASIZE) dut (.wfull(wfull), .rempty(rempty), 
                                  .a(a), .b(b), .c(c), .d(d), 
                                  .e(e), .f(f), .g(g), 
                                  .anode(anode), 

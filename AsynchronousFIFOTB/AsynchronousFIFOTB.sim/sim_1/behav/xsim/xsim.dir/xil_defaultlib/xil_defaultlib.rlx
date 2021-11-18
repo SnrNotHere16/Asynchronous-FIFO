@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.srcs/sim_1/new/dual_clock_async_fifo_design_tb.sv,1637266555,systemVerilog,,,,async_fifo1;async_fifo1_tb;fifomem;rptr_empty;sync_r2w;sync_w2r;wptr_full,,,,,,,,

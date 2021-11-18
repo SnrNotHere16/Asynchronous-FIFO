@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.srcs/sim_1/new/dual_clock_async_fifo_design_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_fifo1
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-2458] undeclared symbol rempty_val, assumed default net type wire [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.srcs/sim_1/new/dual_clock_async_fifo_design_tb.sv:163]
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2458] undeclared symbol wfull_val, assumed default net type wire [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.srcs/sim_1/new/dual_clock_async_fifo_design_tb.sv:210]
+INFO: [VRFC 10-311] analyzing module async_fifo1_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOTB/AsynchronousFIFOTB.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

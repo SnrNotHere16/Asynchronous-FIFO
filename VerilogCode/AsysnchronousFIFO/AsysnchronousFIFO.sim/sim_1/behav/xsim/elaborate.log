@@ -5,4 +5,28 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 32 for port 'data' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v:22]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifo1.v" Line 1. Module fifo1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_r2w.v" Line 1. Module sync_r2w doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_w2r.v" Line 1. Module sync_w2r doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifomem.v" Line 1. Module fifomem_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/rptr_empty.v" Line 2. Module rptr_empty doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/wptr_full.v" Line 3. Module wptr_full doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PixelClock
+Compiling module xil_defaultlib.PixelController
+Compiling module xil_defaultlib.AdMux
+Compiling module xil_defaultlib.HexToSevenSeg
+Compiling module xil_defaultlib.SevenSegmentDisplayController
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.sync_r2w
+Compiling module xil_defaultlib.sync_w2r
+Compiling module xil_defaultlib.fifomem_default
+Compiling module xil_defaultlib.rptr_empty
+Compiling module xil_defaultlib.wptr_full
+Compiling module xil_defaultlib.fifo1
+Compiling module xil_defaultlib.AsynchronousFIFOTop
+Compiling module xil_defaultlib.AsynchronousFIFOTestbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot AsynchronousFIFOTestbench_behav
