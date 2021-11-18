@@ -2,19 +2,16 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Nov 17 21:30:23 2021
-# Process ID: 3824
+# Start of session at: Thu Nov 18 12:27:00 2021
+# Process ID: 13752
 # Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7396 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\VerilogCode\AsysnchronousFIFO\AsysnchronousFIFO.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16356 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\VerilogCode\AsysnchronousFIFO\AsysnchronousFIFO.xpr
 # Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/vivado.log
 # Journal file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.xpr
 launch_simulation
-source fifo1.tcl
-run 1382 ns
-relaunch_sim
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top AsynchronousFIFOTestbench [get_filesets sim_1]
@@ -22,104 +19,9 @@ set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode DisplayOnly [current_project]
 launch_simulation
-launch_simulation
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-run 1382 ns
-run 1382 ns
-run 1382 ns
-relaunch_sim
-restart
-run 1382 ns
-close_sim
-launch_simulation
 source AsynchronousFIFOTestbench.tcl
 close_sim
 launch_simulation
 source AsynchronousFIFOTestbench.tcl
 restart
 run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-restart
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-restart
-run 10000 ns
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-close_sim
-launch_simulation
-source AsynchronousFIFOTestbench.tcl
-restart
-run 10000 ns
-restart
-run 10000 ns
-close_sim

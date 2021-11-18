@@ -43,33 +43,33 @@ module AsynchronousFIFOTestbench();
        
        always#5 clk = ~clk; 
        initial begin 
-            clk = 0; winc = 0; wrst_n = 0; rinc = 0; rrst_n = 0; 
+            clk = 0; winc = 0; wrst_n = 1; rinc = 0; rrst_n = 1; 
             reset = 0; wdata = 0; 
-            repeat (5) @ (posedge clk); reset = 1; wrst_n = 1; rrst_n = 1; 
-            repeat (5) @ (posedge clk); reset = 0; wrst_n = 0; rrst_n = 0; 
+            repeat (5) @ (posedge clk); reset = 1; wrst_n = 0; rrst_n = 0; 
+            repeat (5) @ (posedge clk); reset = 0; wrst_n = 1; rrst_n = 1; 
             @(posedge clk) wdata = 0; @(posedge clk) winc = 1;  //write 1
             @(posedge clk) winc = 0;
             @(posedge clk) begin wdata = 1; end  //write 2 
             @(posedge clk) winc = 1; 
-//            @(posedge clk) winc = 0;
-//            @(posedge clk) begin wdata = 2; end  //write 3 
-//            @(posedge clk) winc = 1; 
-//            @(posedge clk) winc = 0;
-//            @(posedge clk) begin wdata = 3; end  //write 4
-//            @(posedge clk) winc = 1; 
-//            @(posedge clk) winc = 0;
-//            @(posedge clk) begin wdata = 4; end  //write 5
-//            @(posedge clk) begin winc = 1; rinc = 1; end  
-//            @(posedge clk) begin winc = 0; rinc = 0; end 
-//            @(posedge clk) begin wdata = 5; end  //write 6 
-//            @(posedge clk) begin winc = 1; rinc = 1; end  
-//            @(posedge clk) begin winc = 0; rinc = 0; end 
-//            @(posedge clk) begin wdata = 6; end  //write 7
-//            @(posedge clk) begin winc = 1; rinc = 1; end  
-//            @(posedge clk) begin winc = 0; rinc = 0; end 
-//            @(posedge clk) begin wdata = 7; end  //write 8
-//            @(posedge clk) begin winc = 1; rinc = 1; end  
-//            @(posedge clk) begin winc = 0; rinc = 0; end 
+            @(posedge clk) winc = 0;
+            @(posedge clk) begin wdata = 2; end  //write 3 
+            @(posedge clk) winc = 1; 
+            @(posedge clk) winc = 0;
+            @(posedge clk) begin wdata = 3; end  //write 4
+            @(posedge clk) winc = 1; 
+            @(posedge clk) winc = 0;
+            @(posedge clk) begin wdata = 4; end  //write 5
+            @(posedge clk) begin winc = 1; rinc = 1; end  
+            @(posedge clk) begin winc = 0; rinc = 0; end 
+            @(posedge clk) begin wdata = 5; end  //write 6 
+            @(posedge clk) begin winc = 1; rinc = 1; end  
+            @(posedge clk) begin winc = 0; rinc = 0; end 
+            @(posedge clk) begin wdata = 6; end  //write 7
+            @(posedge clk) begin winc = 1; rinc = 1; end  
+            @(posedge clk) begin winc = 0; rinc = 0; end 
+            @(posedge clk) begin wdata = 7; end  //write 8
+            @(posedge clk) begin winc = 1; rinc = 1; end  
+            @(posedge clk) begin winc = 0; rinc = 0; end 
        end 
     
     
