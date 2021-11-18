@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/fifo1.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/fifomem.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/sync_r2w.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/sync_w2r.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/rptr_empty.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/wptr_full.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/SevenSegmentDisplayController.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/PixelClock.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/AdMux.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/PixelController.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/clkdiv.v" \
+"../../../../AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

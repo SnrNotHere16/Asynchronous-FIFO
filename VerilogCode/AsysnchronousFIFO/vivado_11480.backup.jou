@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Nov 17 12:02:18 2021
+# Process ID: 11480
+# Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19888 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\VerilogCode\AsysnchronousFIFO\AsysnchronousFIFO.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.xpr
+file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v w ]
+add_files -fileset sim_1 C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v

@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1637113209">
-  <File Type="BITSTR-BMM" Name="AsynchronousFIFOTop_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="AsynchronousFIFOTop_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="AsynchronousFIFOTop_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="AsynchronousFIFOTop_power_routed.rpt"/>
   <File Type="PA-TCL" Name="AsynchronousFIFOTop.tcl"/>
-  <File Type="OPT-TIMING" Name="AsynchronousFIFOTop_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="AsynchronousFIFOTop_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="AsynchronousFIFOTop_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="AsynchronousFIFOTop_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="AsynchronousFIFOTop_reports.tcl"/>
+  <File Type="OPT-DCP" Name="AsynchronousFIFOTop_opt.dcp"/>
   <File Type="OPT-DRC" Name="AsynchronousFIFOTop_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="AsynchronousFIFOTop.hwdef"/>
   <File Type="PWROPT-DCP" Name="AsynchronousFIFOTop_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="AsynchronousFIFOTop_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="AsynchronousFIFOTop_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="AsynchronousFIFOTop_placed.dcp"/>
   <File Type="PLACE-IO" Name="AsynchronousFIFOTop_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="AsynchronousFIFOTop_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="AsynchronousFIFOTop_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="AsynchronousFIFOTop_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="AsynchronousFIFOTop_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="AsynchronousFIFOTop_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="AsynchronousFIFOTop_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="AsynchronousFIFOTop.bgn"/>
-  <File Type="PLACE-TIMING" Name="AsynchronousFIFOTop_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="AsynchronousFIFOTop_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="AsynchronousFIFOTop.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="AsynchronousFIFOTop_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="AsynchronousFIFOTop_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="AsynchronousFIFOTop_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="AsynchronousFIFOTop.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="AsynchronousFIFOTop_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="AsynchronousFIFOTop_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="AsynchronousFIFOTop_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="AsynchronousFIFOTop_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="AsynchronousFIFOTop_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="AsynchronousFIFOTop_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="AsynchronousFIFOTop.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="AsynchronousFIFOTop_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="AsynchronousFIFOTop.mmi"/>
+  <File Type="BITSTR-LTX" Name="AsynchronousFIFOTop.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="AsynchronousFIFOTop_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="AsynchronousFIFOTop.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AsynchronousFIFOTop_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="AsynchronousFIFOTop.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AsynchronousFIFOTop_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="AsynchronousFIFOTop.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="AsynchronousFIFOTop_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="AsynchronousFIFOTop_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="AsynchronousFIFOTop_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="AsynchronousFIFOTop_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="AsynchronousFIFOTop_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="AsynchronousFIFOTop_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="AsynchronousFIFOTop_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="AsynchronousFIFOTop_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="AsynchronousFIFOTop_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="AsynchronousFIFOTop_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="AsynchronousFIFOTop_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="AsynchronousFIFOTop_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AsynchronousFIFOTop_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AsynchronousFIFOTop_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AsynchronousFIFOTop_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AsynchronousFIFOTop_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="AsynchronousFIFOTop_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="AsynchronousFIFOTop_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="AsynchronousFIFOTop.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="AsynchronousFIFOTop_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="AsynchronousFIFOTop.rbt"/>
   <File Type="BITSTR-NKY" Name="AsynchronousFIFOTop.nky"/>
   <File Type="BG-DRC" Name="AsynchronousFIFOTop.drc"/>
