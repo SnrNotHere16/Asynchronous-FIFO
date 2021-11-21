@@ -47,29 +47,22 @@ module AsynchronousFIFOTestbench();
             reset = 0; wdata = 0; 
             repeat (5) @ (posedge clk); reset = 1; wrst_n = 0; rrst_n = 0; 
             repeat (5) @ (posedge clk); reset = 0; wrst_n = 1; rrst_n = 1; 
-            @(posedge clk) wdata = 0; @(posedge clk) winc = 1;  //write 1
-            @(posedge clk) winc = 0;
-            @(posedge clk) begin wdata = 1; end  //write 2 
-            @(posedge clk) winc = 1; 
-            @(posedge clk) winc = 0;
-            @(posedge clk) begin wdata = 2; end  //write 3 
-            @(posedge clk) winc = 1; 
-            @(posedge clk) winc = 0;
-            @(posedge clk) begin wdata = 3; end  //write 4
-            @(posedge clk) winc = 1; 
-            @(posedge clk) winc = 0;
-            @(posedge clk) begin wdata = 4; end  //write 5
-            @(posedge clk) begin winc = 1; rinc = 1; end  
-            @(posedge clk) begin winc = 0; rinc = 0; end 
-            @(posedge clk) begin wdata = 5; end  //write 6 
-            @(posedge clk) begin winc = 1; rinc = 1; end  
-            @(posedge clk) begin winc = 0; rinc = 0; end 
-            @(posedge clk) begin wdata = 6; end  //write 7
-            @(posedge clk) begin winc = 1; rinc = 1; end  
-            @(posedge clk) begin winc = 0; rinc = 0; end 
-            @(posedge clk) begin wdata = 7; end  //write 8
-            @(posedge clk) begin winc = 1; rinc = 1; end  
-            @(posedge clk) begin winc = 0; rinc = 0; end 
+            @ (posedge clk) begin 
+                winc = 1; 
+                wdata = 4; 
+            end 
+//            repeat (27) @ (posedge clk) begin //fill up the FIFO
+//                winc = 1; 
+//                wdata = $urandom%256;
+//            end            
+//            repeat (3) @ (posedge clk) begin //Empty the FIFO
+//                winc = 0; 
+//                rinc = 1; 
+//              //  wdata = $urandom%256;
+//            repeat (3) @ (posedge clk) begin //fill up the FIFO
+//                winc = 1; 
+//                wdata = $urandom%256;
+//            end       
        end 
     
     
