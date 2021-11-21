@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Nov 21 14:43:47 2021
+| Date             : Sun Nov 21 15:20:58 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file AsynchronousFIFOTop_power_routed.rpt -pb AsynchronousFIFOTop_power_summary_routed.pb -rpx AsynchronousFIFOTop_power_routed.rpx
 | Design           : AsynchronousFIFOTop
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 24.666 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 24.384 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 23.870                           |
+| Dynamic (W)              | 23.587                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     0.711 |      437 |       --- |             --- |
-|   LUT as Logic           |     0.582 |      168 |     63400 |            0.26 |
-|   CARRY4                 |     0.060 |       36 |     15850 |            0.23 |
-|   Register               |     0.048 |      166 |    126800 |            0.13 |
+| Slice Logic              |     0.678 |      439 |       --- |             --- |
+|   LUT as Logic           |     0.554 |      170 |     63400 |            0.27 |
+|   CARRY4                 |     0.062 |       36 |     15850 |            0.23 |
+|   Register               |     0.041 |      166 |    126800 |            0.13 |
 |   LUT as Distributed RAM |     0.015 |        8 |     19000 |            0.04 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |       16 |       --- |             --- |
-| Signals                  |     0.895 |      368 |       --- |             --- |
+| Signals                  |     0.645 |      306 |       --- |             --- |
 | I/O                      |    22.264 |       31 |       210 |           14.76 |
 | Static Power             |     0.797 |          |           |                 |
-| Total                    |    24.666 |          |           |                 |
+| Total                    |    24.384 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     2.212 |       1.650 |      0.563 |
+| Vccint    |       1.000 |     1.930 |       1.367 |      0.563 |
 | Vccaux    |       1.800 |     0.907 |       0.814 |      0.093 |
 | Vcco33    |       3.300 |     6.293 |       6.289 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,22 +139,22 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| AsynchronousFIFOTop    |    23.870 |
-|   read                 |     0.333 |
-|     write              |     0.333 |
+| AsynchronousFIFOTop    |    23.587 |
+|   read                 |     0.166 |
+|     write              |     0.166 |
 |       one              |     0.026 |
-|       zero             |     0.307 |
-|   two                  |     0.021 |
-|     fifomem            |     0.021 |
-|       mem_reg_0_15_0_5 |     0.015 |
+|       zero             |     0.140 |
+|   two                  |     0.024 |
+|     fifomem            |     0.023 |
+|       mem_reg_0_15_0_5 |     0.018 |
 |       mem_reg_0_15_6_7 |     0.005 |
-|   write                |     0.349 |
-|     write              |     0.349 |
-|       one              |     0.023 |
-|       zero             |     0.326 |
-|   zero                 |     0.847 |
-|     one                |     0.243 |
-|     two                |     0.604 |
+|   write                |     0.171 |
+|     write              |     0.171 |
+|       one              |     0.027 |
+|       zero             |     0.144 |
+|   zero                 |     0.906 |
+|     one                |     0.391 |
+|     two                |     0.515 |
 +------------------------+-----------+
 
 

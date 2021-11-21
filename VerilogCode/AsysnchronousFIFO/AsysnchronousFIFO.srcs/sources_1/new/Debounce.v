@@ -22,10 +22,11 @@
 
 module Debounce(input clk, 
                 input reset,
-                input D_in,  
+                input D_in, 
+                input [31:0] count,  
                 output D_out);
                 wire clk_out; 
     
-    Clk500Hz zero( .clk(clk),.reset(reset), .clk_out(clk_out));
+    Clk500Hz zero( .clk(clk),.reset(reset), .count(count), .clk_out(clk_out));
     OneShot one (.D_in(D_in), .clk_in(clk_out), .reset(reset), .D_out(D_out) );
 endmodule

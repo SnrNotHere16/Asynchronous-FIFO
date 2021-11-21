@@ -6,7 +6,8 @@
 
 module Clk500Hz(
     input clk,
-    input reset, 
+    input reset,
+    input [31:0] count, 
     output reg clk_out
     );
     integer i; 
@@ -17,7 +18,7 @@ module Clk500Hz(
             clk_out <= 1'b0; 
         end 
         else begin 
-            if (i == 199999)begin 
+            if (i == count)begin 
                 clk_out <= 1'b1; 
                 i <= 0; 
             end 

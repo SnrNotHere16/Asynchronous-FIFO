@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov 21 14:43:07 2021
+| Date         : Sun Nov 21 15:20:19 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file AsynchronousFIFOTop_control_sets_placed.rpt
 | Design       : AsynchronousFIFOTop
@@ -59,7 +59,7 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             166 |           54 |
+| No           | No                    | Yes                    |             166 |           47 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -75,11 +75,11 @@ Table of Contents
 +---------------------------------+-----------------------+-----------------------+------------------+----------------+
 |  zero/one/CLK                   |                       | reset_IBUF            |                2 |              3 |
 |  read/write/zero/clk_out_reg_0  |                       | reset_IBUF            |                3 |             10 |
-|  write/write/zero/clk_out_reg_0 |                       | reset_IBUF            |                3 |             10 |
+|  write/write/zero/clk_out_reg_0 |                       | reset_IBUF            |                2 |             10 |
 |  clk_IBUF_BUFG                  | write/write1/q2_reg_0 |                       |                2 |             16 |
-|  clk_IBUF_BUFG                  |                       | two/rptr_empty/rrst_n |                6 |             20 |
-|  clk_IBUF_BUFG                  |                       | two/wptr_full/wrst_n  |                3 |             20 |
-|  clk_IBUF_BUFG                  |                       | reset_IBUF            |               37 |            103 |
+|  clk_IBUF_BUFG                  |                       | two/rptr_empty/rrst_n |                4 |             20 |
+|  clk_IBUF_BUFG                  |                       | two/wptr_full/wrst_n  |                6 |             20 |
+|  clk_IBUF_BUFG                  |                       | reset_IBUF            |               30 |            103 |
 +---------------------------------+-----------------------+-----------------------+------------------+----------------+
 
 
