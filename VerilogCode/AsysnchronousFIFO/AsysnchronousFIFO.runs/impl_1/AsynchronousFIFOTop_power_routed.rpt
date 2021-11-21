@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Nov 16 17:42:44 2021
+| Date             : Sat Nov 20 20:25:59 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file AsynchronousFIFOTop_power_routed.rpt -pb AsynchronousFIFOTop_power_summary_routed.pb -rpx AsynchronousFIFOTop_power_routed.rpx
 | Design           : AsynchronousFIFOTop
@@ -29,40 +29,41 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 12.470       |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 12.219       |
-| Device Static (W)        | 0.251        |
-| Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 28.1         |
-| Junction Temperature (C) | 81.9         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 25.073 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 24.276                           |
+| Device Static (W)        | 0.797                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.293 |      138 |       --- |             --- |
-|   LUT as Logic |     0.252 |       55 |     63400 |            0.09 |
-|   CARRY4       |     0.023 |       20 |     15850 |            0.13 |
-|   Register     |     0.012 |       36 |    126800 |            0.03 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.263 |       98 |       --- |             --- |
-| I/O            |    11.663 |       19 |       210 |            9.05 |
-| Static Power   |     0.251 |          |           |                 |
-| Total          |    12.470 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic              |     0.631 |      245 |       --- |             --- |
+|   LUT as Logic           |     0.546 |       84 |     63400 |            0.13 |
+|   Register               |     0.036 |       80 |    126800 |            0.06 |
+|   CARRY4                 |     0.024 |       20 |     15850 |            0.13 |
+|   LUT as Distributed RAM |     0.020 |        8 |     19000 |            0.04 |
+|   BUFG                   |     0.006 |        1 |        32 |            3.13 |
+|   Others                 |     0.000 |        9 |       --- |             --- |
+| Signals                  |     0.755 |      188 |       --- |             --- |
+| I/O                      |    22.890 |       31 |       210 |           14.76 |
+| Static Power             |     0.797 |          |           |                 |
+| Total                    |    25.073 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -71,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.697 |       0.560 |      0.137 |
-| Vccaux    |       1.800 |     0.461 |       0.427 |      0.034 |
-| Vcco33    |       3.300 |     3.304 |       3.300 |      0.004 |
+| Vccint    |       1.000 |     1.993 |       1.430 |      0.563 |
+| Vccaux    |       1.800 |     0.930 |       0.837 |      0.093 |
+| Vcco33    |       3.300 |     6.470 |       6.466 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.000 |      0.004 |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -135,13 +136,22 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| AsynchronousFIFOTop |    12.219 |
-|   zero              |     0.543 |
-|     one             |     0.262 |
-|     two             |     0.281 |
-+---------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| AsynchronousFIFOTop    |    24.276 |
+|   one                  |     0.085 |
+|   two                  |     0.401 |
+|     fifomem            |     0.027 |
+|       mem_reg_0_15_0_5 |     0.020 |
+|       mem_reg_0_15_6_7 |     0.007 |
+|     rptr_empty         |     0.145 |
+|     sync_r2w           |     0.035 |
+|     sync_w2r           |     0.026 |
+|     wptr_full          |     0.169 |
+|   zero                 |     0.843 |
+|     one                |     0.275 |
+|     two                |     0.568 |
++------------------------+-----------+
 
 

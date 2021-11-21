@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$stop called at time : 1065 ns : File "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" Line 63
+$stop called at time : 1065 ns : File "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" Line 63

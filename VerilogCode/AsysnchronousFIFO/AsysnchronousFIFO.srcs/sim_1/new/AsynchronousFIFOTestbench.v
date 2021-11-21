@@ -51,23 +51,15 @@ module AsynchronousFIFOTestbench();
                 winc = 1; 
                 wdata = $urandom; 
             end 
-            repeat (4) @ (posedge clk) begin 
+            repeat (62) @ (posedge clk) begin //Empty the FIFO
                  winc = 0; 
                  rinc = 1; 
+            end    
+             repeat(18) @ (posedge clk) begin  //Fill up the FIFO 
+                rinc = 0; 
+                winc = 1; 
+                wdata = $urandom; 
             end 
-
-//            repeat (27) @ (posedge clk) begin //fill up the FIFO
-//                winc = 1; 
-//                wdata = $urandom%256;
-//            end            
-//            repeat (3) @ (posedge clk) begin //Empty the FIFO
-//                winc = 0; 
-//                rinc = 1; 
-//              //  wdata = $urandom%256;
-//            repeat (3) @ (posedge clk) begin //fill up the FIFO
-//                winc = 1; 
-//                wdata = $urandom%256;
-//            end       
        $stop; 
        end 
     
