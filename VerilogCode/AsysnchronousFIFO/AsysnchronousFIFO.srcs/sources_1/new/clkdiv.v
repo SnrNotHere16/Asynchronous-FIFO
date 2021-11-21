@@ -17,7 +17,7 @@ module clkdiv(      clk,
 //  combonational logic block         //
 ////////////////////////////////////////
  always @(*) 
- tick = (q == 1);
+ tick = (q == 3);
  
 ////////////////////////////////////////
 //  sequential logic block            //
