@@ -16,11 +16,11 @@ module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
                            input winc, wrst_n, //wclk
                            input rinc, rrst_n );//rclk
                            wire [DSIZE-1:0] rdata; 
-                           wire clk2, winc_o, rinc_o; 
                            wire rinc_i, winc_i; 
+                           wire clk2; 
                            
-    DebouncePED write();
-    DebouncePED read(); 
+    DebouncePED write(.clk(clk), .reset(reset), .inc(winc), .inc_i(winc_i));
+    DebouncePED read(.clk(clk), .reset(reset), .inc(rinc), .inc_i(rinc_i)); 
     SevenSegmentDisplayController zero(clk, reset, rdata, 
                                       a, b, c, d, e, f, g, anode);
     clkdiv one (.clk(clk), .reset(reset), .tick(clk2));

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Nov 21 13:34:23 2021
+| Date             : Sun Nov 21 14:43:47 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file AsynchronousFIFOTop_power_routed.rpt -pb AsynchronousFIFOTop_power_summary_routed.pb -rpx AsynchronousFIFOTop_power_routed.rpx
 | Design           : AsynchronousFIFOTop
@@ -141,15 +141,17 @@ Table of Contents
 +------------------------+-----------+
 | AsynchronousFIFOTop    |    23.870 |
 |   read                 |     0.333 |
-|     one                |     0.026 |
-|     zero               |     0.307 |
+|     write              |     0.333 |
+|       one              |     0.026 |
+|       zero             |     0.307 |
 |   two                  |     0.021 |
 |     fifomem            |     0.021 |
 |       mem_reg_0_15_0_5 |     0.015 |
 |       mem_reg_0_15_6_7 |     0.005 |
 |   write                |     0.349 |
-|     one                |     0.023 |
-|     zero               |     0.326 |
+|     write              |     0.349 |
+|       one              |     0.023 |
+|       zero             |     0.326 |
 |   zero                 |     0.847 |
 |     one                |     0.243 |
 |     two                |     0.604 |

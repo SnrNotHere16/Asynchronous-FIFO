@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov 21 13:34:24 2021
+| Date         : Sun Nov 21 14:43:47 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file AsynchronousFIFOTop_clock_utilization_routed.rpt
 | Design       : AsynchronousFIFOTop
@@ -66,13 +66,13 @@ Table of Contents
 4. Local Clock Details
 ----------------------
 
-+----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------+--------------------------+
-| Local Id | Driver Type/Pin | Constraint | Site/BEL        | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin               | Net                      |
-+----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------+--------------------------||
-| 0        | FDCE/Q          | None       | SLICE_X2Y83/AFF | X0Y1         |          10 |               0 |              |       | read/zero/clk_out_reg/Q  | read/zero/clk_out_reg_0  - Static -
-| 1        | FDCE/Q          | None       | SLICE_X7Y83/AFF | X0Y1         |          10 |               0 |              |       | write/zero/clk_out_reg/Q | write/zero/clk_out_reg_0 - Static -
-| 2        | FDCE/Q          | None       | SLICE_X1Y80/AFF | X0Y1         |           3 |               1 |              |       | zero/one/clk_out_reg/Q   | zero/one/CLK             - Static -
-+----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------+--------------------------||
++----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------------+--------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL        | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                     | Net                            |
++----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------------+--------------------------------||
+| 0        | FDCE/Q          | None       | SLICE_X2Y83/AFF | X0Y1         |          10 |               0 |              |       | read/write/zero/clk_out_reg/Q  | read/write/zero/clk_out_reg_0  - Static -
+| 1        | FDCE/Q          | None       | SLICE_X7Y83/AFF | X0Y1         |          10 |               0 |              |       | write/write/zero/clk_out_reg/Q | write/write/zero/clk_out_reg_0 - Static -
+| 2        | FDCE/Q          | None       | SLICE_X1Y80/AFF | X0Y1         |           3 |               1 |              |       | zero/one/clk_out_reg/Q         | zero/one/CLK                   - Static -
++----------+-----------------+------------+-----------------+--------------+-------------+-----------------+--------------+-------+--------------------------------+--------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
 *** Non-Clock Loads column represents the non-clock pin loads (pin count)
