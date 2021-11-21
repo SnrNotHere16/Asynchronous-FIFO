@@ -60,7 +60,8 @@ module AsynchronousFIFOTestbench();
                 winc = 1; 
                 wdata = $urandom; 
             end 
-       $stop; 
+            winc = 1; 
+       //$stop; 
        end 
     
 endmodule

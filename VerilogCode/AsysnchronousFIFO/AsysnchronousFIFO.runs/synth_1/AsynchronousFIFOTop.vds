@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Nov 20 20:24:04 2021
-# Process ID: 8696
+# Start of session at: Sun Nov 21 13:32:24 2021
+# Process ID: 12316
 # Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.runs/synth_1
 # Command line: vivado.exe -log AsynchronousFIFOTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AsynchronousFIFOTop.tcl
 # Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.runs/synth_1/AsynchronousFIFOTop.vds
@@ -16,21 +16,29 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2912 
+INFO: Helper process launched with PID 13108 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 845.719 ; gain = 177.711
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 845.445 ; gain = 178.770
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'AsynchronousFIFOTop' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v:8]
 	Parameter DSIZE bound to: 8 - type: integer 
 	Parameter ASIZE bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Debounce' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/Debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Clk500Hz' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/Clk500Hz.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'Clk500Hz' (1#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/Clk500Hz.v:7]
+INFO: [Synth 8-6157] synthesizing module 'OneShot' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/OneShot.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OneShot' (2#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/OneShot.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Debounce' (3#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/Debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PED' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PED.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PED' (4#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PED.v:4]
 INFO: [Synth 8-6157] synthesizing module 'SevenSegmentDisplayController' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/SevenSegmentDisplayController.v:10]
 INFO: [Synth 8-6157] synthesizing module 'PixelClock' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelClock.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'PixelClock' (1#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelClock.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'PixelClock' (5#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelClock.v:16]
 INFO: [Synth 8-6157] synthesizing module 'PixelController' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:14]
 INFO: [Synth 8-226] default block is never used [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:34]
 INFO: [Synth 8-226] default block is never used [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:61]
 INFO: [Synth 8-226] default block is never used [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:80]
-INFO: [Synth 8-6155] done synthesizing module 'PixelController' (2#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'PixelController' (6#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/PixelController.v:14]
 INFO: [Synth 8-6157] synthesizing module 'AdMux' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:13]
 INFO: [Synth 8-226] default block is never used [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:23]
 WARNING: [Synth 8-567] referenced signal 'd0' should be on the sensitivity list [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:22]
@@ -41,37 +49,37 @@ WARNING: [Synth 8-567] referenced signal 'd4' should be on the sensitivity list 
 WARNING: [Synth 8-567] referenced signal 'd5' should be on the sensitivity list [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:22]
 WARNING: [Synth 8-567] referenced signal 'd6' should be on the sensitivity list [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:22]
 WARNING: [Synth 8-567] referenced signal 'd7' should be on the sensitivity list [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'AdMux' (3#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'AdMux' (7#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AdMux.v:13]
 INFO: [Synth 8-6157] synthesizing module 'HexToSevenSeg' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v:13]
 INFO: [Synth 8-226] default block is never used [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'HexToSevenSeg' (4#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentDisplayController' (5#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/SevenSegmentDisplayController.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HexToSevenSeg' (8#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/HexToSevenSeg.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentDisplayController' (9#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/SevenSegmentDisplayController.v:10]
 INFO: [Synth 8-6157] synthesizing module 'clkdiv' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/clkdiv.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'clkdiv' (6#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/clkdiv.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'clkdiv' (10#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/clkdiv.v:7]
 INFO: [Synth 8-6157] synthesizing module 'fifo1' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifo1.v:1]
 	Parameter DSIZE bound to: 8 - type: integer 
 	Parameter ASIZE bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'sync_r2w' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_r2w.v:1]
 	Parameter ADDRSIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'sync_r2w' (7#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_r2w.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sync_r2w' (11#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_r2w.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sync_w2r' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_w2r.v:1]
 	Parameter ADDRSIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'sync_w2r' (8#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_w2r.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sync_w2r' (12#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/sync_w2r.v:1]
 INFO: [Synth 8-6157] synthesizing module 'fifomem' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifomem.v:1]
 	Parameter DATASIZE bound to: 8 - type: integer 
 	Parameter ADDRSIZE bound to: 4 - type: integer 
 	Parameter DEPTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'fifomem' (9#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifomem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fifomem' (13#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifomem.v:1]
 INFO: [Synth 8-6157] synthesizing module 'rptr_empty' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/rptr_empty.v:2]
 	Parameter ADDRSIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'rptr_empty' (10#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/rptr_empty.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'rptr_empty' (14#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/rptr_empty.v:2]
 INFO: [Synth 8-6157] synthesizing module 'wptr_full' [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/wptr_full.v:3]
 	Parameter ADDRSIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'wptr_full' (11#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/wptr_full.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'fifo1' (12#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifo1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'AsynchronousFIFOTop' (13#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'wptr_full' (15#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/wptr_full.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fifo1' (16#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/fifo1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AsynchronousFIFOTop' (17#1) [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v:8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 908.453 ; gain = 240.445
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 909.020 ; gain = 242.344
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -84,10 +92,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 908.453 ; gain = 240.445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 909.020 ; gain = 242.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 908.453 ; gain = 240.445
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 909.020 ; gain = 242.344
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -99,26 +107,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/AsynchronousFIFOTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1012.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1012.094 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1012.988 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1012.094 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PresentState_reg' in module 'PixelController'
 INFO: [Synth 8-5544] ROM "Annode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -137,7 +145,7 @@ INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because addres
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PresentState_reg' using encoding 'sequential' in module 'PixelController'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -150,18 +158,20 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
 	   2 Input      5 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      5 Bit         XORs := 2     
 +---Registers : 
+	               32 Bit    Registers := 2     
 	                5 Bit    Registers := 8     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 29    
 +---RAMs : 
 	              128 Bit         RAMs := 1     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
@@ -173,6 +183,23 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module Clk500Hz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module OneShot 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 10    
+Module PED 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
 Module PixelClock 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -243,7 +270,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -270,13 +297,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1012.988 ; gain = 344.980
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1012.094 ; gain = 345.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -304,7 +331,7 @@ Start Technology Mapping
 INFO: [Synth 8-3886] merging instance 'two/wptr_full/wptr_reg[4]' (FDC) to 'two/wptr_full/wbin_reg[4]'
 INFO: [Synth 8-3886] merging instance 'two/rptr_empty/rptr_reg[4]' (FDC) to 'two/rptr_empty/rbin_reg[4]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1017.797 ; gain = 349.789
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1018.188 ; gain = 351.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -328,7 +355,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -341,7 +368,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,25 +380,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -388,15 +415,15 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    20|
-|3     |LUT1   |     4|
-|4     |LUT2   |    68|
-|5     |LUT3   |    13|
-|6     |LUT4   |    14|
-|7     |LUT5   |    10|
-|8     |LUT6   |    10|
+|2     |CARRY4 |    36|
+|3     |LUT1   |     5|
+|4     |LUT2   |    66|
+|5     |LUT3   |    11|
+|6     |LUT4   |    22|
+|7     |LUT5   |    85|
+|8     |LUT6   |    13|
 |9     |RAM32M |     2|
-|10    |FDCE   |    79|
+|10    |FDCE   |   165|
 |11    |FDPE   |     1|
 |12    |IBUF   |    14|
 |13    |OBUF   |    17|
@@ -406,41 +433,48 @@ Report Instance Areas:
 +------+---------------+------------------------------+------+
 |      |Instance       |Module                        |Cells |
 +------+---------------+------------------------------+------+
-|1     |top            |                              |   253|
-|2     |  one          |clkdiv                        |     9|
-|3     |  two          |fifo1                         |    69|
-|4     |    fifomem    |fifomem                       |     2|
-|5     |    rptr_empty |rptr_empty                    |    23|
-|6     |    sync_r2w   |sync_r2w                      |    10|
-|7     |    sync_w2r   |sync_w2r                      |    10|
-|8     |    wptr_full  |wptr_full                     |    24|
-|9     |  zero         |SevenSegmentDisplayController |   143|
-|10    |    one        |PixelClock                    |   118|
-|11    |    two        |PixelController               |    25|
+|1     |top            |                              |   438|
+|2     |  read         |Debounce                      |    94|
+|3     |    one        |OneShot_2                     |    12|
+|4     |    zero       |Clk500Hz_3                    |    82|
+|5     |  read1        |PED                           |     3|
+|6     |  two          |fifo1                         |    69|
+|7     |    fifomem    |fifomem                       |     2|
+|8     |    rptr_empty |rptr_empty                    |    24|
+|9     |    sync_r2w   |sync_r2w                      |    10|
+|10    |    sync_w2r   |sync_w2r                      |    10|
+|11    |    wptr_full  |wptr_full                     |    23|
+|12    |  write        |Debounce_0                    |    94|
+|13    |    one        |OneShot                       |    12|
+|14    |    zero       |Clk500Hz                      |    82|
+|15    |  write1       |PED_1                         |     3|
+|16    |  zero         |SevenSegmentDisplayController |   143|
+|17    |    one        |PixelClock                    |   118|
+|18    |    two        |PixelController               |    25|
 +------+---------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.566 ; gain = 261.023
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1033.566 ; gain = 365.559
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1033.957 ; gain = 264.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1033.957 ; gain = 367.281
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1051.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.539 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1051.867 ; gain = 654.609
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1051.867 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1044.539 ; gain = 648.418
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.539 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.runs/synth_1/AsynchronousFIFOTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file AsynchronousFIFOTop_utilization_synth.rpt -pb AsynchronousFIFOTop_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 20 20:24:45 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 21 13:33:04 2021...

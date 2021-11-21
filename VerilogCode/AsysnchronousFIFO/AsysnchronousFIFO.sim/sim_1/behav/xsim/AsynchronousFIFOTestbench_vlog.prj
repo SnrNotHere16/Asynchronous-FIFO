@@ -13,6 +13,10 @@ verilog xil_defaultlib  \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/PixelController.v" \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/AsynchronousFIFOTop.v" \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/clkdiv.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/Clk500Hz.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/OneShot.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/Debounce.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/PED.v" \
 "../../../../AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" \
 
 # compile glbl module

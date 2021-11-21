@@ -1,7 +1,7 @@
-Running: xsim.dir/AsynchronousFIFOTestbench_behav/xsimk.exe -simmode gui -wdb AsynchronousFIFOTestbench_behav.wdb -simrunnum 0 -socket 52602
+Running: xsim.dir/AsynchronousFIFOTestbench_behav/xsimk.exe -simmode gui -wdb AsynchronousFIFOTestbench_behav.wdb -simrunnum 0 -socket 58635
 Design successfully loaded
-Design Loading Memory Usage: 5808 KB (Peak: 5808 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 5804 KB (Peak: 5804 KB)
+Design Loading CPU Usage: 31 ms
 Simulation completed
-Simulation Memory Usage: 6608 KB (Peak: 6608 KB)
-Simulation CPU Usage: 31 ms
+Simulation Memory Usage: 14480 KB (Peak: 14480 KB)
+Simulation CPU Usage: 437 ms
