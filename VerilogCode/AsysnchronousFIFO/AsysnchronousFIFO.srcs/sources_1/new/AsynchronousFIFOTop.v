@@ -1,7 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-
+// File: AsynchronousFIFOTop.v 
+// The following module is the top module for the AsynchronousFIFO 
+// The module includes a clock divier, seven segment display, 
+// Debounce and PED module, and Cummings' Asynchronous FIFO. 
+// This was made to be used on the NEXYS4DDR 
+// The master clk is assumed to be 100Mhz 
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -18,8 +22,8 @@ module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
                            wire [DSIZE-1:0] rdata; 
                            wire rinc_i, winc_i; 
                            wire clk2; 
-     localparam count100MHz = 199999; 
-     localparam count25MHz =  50000/2; //2000000/4              
+    localparam count100MHz = 199999; 
+    localparam count25MHz =  49999; //2000000/4              
     DebouncePED write(.clk(clk),.clkPED(clk),  .reset(reset),.count(count100MHz), .inc(winc), .inc_i(winc_i));
     DebouncePED read(.clk(clk2), .clkPED(clk), .reset(reset), .count(count25MHz), .inc(rinc), .inc_i(rinc_i)); 
     SevenSegmentDisplayController zero(clk, reset, rdata, 

@@ -1,22 +1,18 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/21/2021 02:06:57 PM
-// Design Name: 
-// Module Name: DebouncePED
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// File: DebouncePED.v 
+// The following module incorporates a debounce module and 
+// a PED (positive edge detection module). 
+//Portlist: 
+//  Input: 
+//       clk - the clk for the debounce 
+//       clkPED - the clk for the PED 
+//       reset - the rest button 
+//       inc - the input for the debounce to detect a button press 
+//       count - this variable is used to determine the counter max value 
+//               for the 500Hz clock. 
+//  Output:
+//        inc_i - the output of the PED for one clock cycle. 
 //////////////////////////////////////////////////////////////////////////////////
 
 

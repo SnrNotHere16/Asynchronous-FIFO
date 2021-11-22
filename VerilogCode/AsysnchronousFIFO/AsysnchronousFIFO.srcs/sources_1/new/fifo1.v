@@ -1,3 +1,5 @@
+//fifo1.v 
+//The top module for Cumming's Asynchronous FIFO Design 
 module fifo1   #(parameter DSIZE = 8,
                  parameter ASIZE = 4)
     (output [DSIZE-1:0] rdata,

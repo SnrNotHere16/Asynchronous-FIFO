@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Nov 21 20:05:06 2021
+| Date             : Mon Nov 22 13:05:37 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file AsynchronousFIFOTop_power_routed.rpt -pb AsynchronousFIFOTop_power_summary_routed.pb -rpx AsynchronousFIFOTop_power_routed.rpx
 | Design           : AsynchronousFIFOTop
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 24.525 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 24.526 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
 | Dynamic (W)              | 23.729                           |
@@ -62,7 +62,7 @@ Table of Contents
 | Signals                  |     0.713 |      312 |       --- |             --- |
 | I/O                      |    22.264 |       31 |       210 |           14.76 |
 | Static Power             |     0.797 |          |           |                 |
-| Total                    |    24.525 |          |           |                 |
+| Total                    |    24.526 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     2.071 |       1.509 |      0.563 |
+| Vccint    |       1.000 |     2.072 |       1.509 |      0.563 |
 | Vccaux    |       1.800 |     0.907 |       0.814 |      0.093 |
 | Vcco33    |       3.300 |     6.293 |       6.289 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,10 +141,10 @@ Table of Contents
 +------------------------+-----------+
 | AsynchronousFIFOTop    |    23.729 |
 |   one                  |     0.067 |
-|   read                 |     0.174 |
+|   read                 |     0.175 |
 |     write              |     0.174 |
 |       one              |     0.027 |
-|       zero             |     0.147 |
+|       zero             |     0.148 |
 |   two                  |     0.022 |
 |     fifomem            |     0.022 |
 |       mem_reg_0_15_0_5 |     0.017 |
