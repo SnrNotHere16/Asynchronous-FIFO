@@ -1,2 +1,3 @@
 Vivado Simulator 2019.1
 Time resolution is 1 ps
+$stop called at time : 748000535 ns : File "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" Line 65

@@ -19,9 +19,9 @@ module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
                            wire rinc_i, winc_i; 
                            wire clk2; 
      localparam count100MHz = 199999; 
-     localparam count25MHz =  50000; //2000000/4              
-    DebouncePED write(.clk(clk), .reset(reset),.count(count100MHz), .inc(winc), .inc_i(winc_i));
-    DebouncePED read(.clk(clk), .reset(reset), .count(count100MHz), .inc(rinc), .inc_i(rinc_i)); 
+     localparam count25MHz =  50000/2; //2000000/4              
+    DebouncePED write(.clk(clk),.clkPED(clk),  .reset(reset),.count(count100MHz), .inc(winc), .inc_i(winc_i));
+    DebouncePED read(.clk(clk2), .clkPED(clk), .reset(reset), .count(count25MHz), .inc(rinc), .inc_i(rinc_i)); 
     SevenSegmentDisplayController zero(clk, reset, rdata, 
                                       a, b, c, d, e, f, g, anode);
     clkdiv one (.clk(clk), .reset(reset), .tick(clk2));

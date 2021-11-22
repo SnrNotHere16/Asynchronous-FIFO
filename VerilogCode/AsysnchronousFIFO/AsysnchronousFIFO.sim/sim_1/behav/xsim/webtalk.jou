@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Nov 21 11:32:48 2021
-# Process ID: 17032
+# Start of session at: Mon Nov 22 12:07:23 2021
+# Process ID: 11244
 # Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.sim/sim_1/behav/xsim/xsim.dir/AsynchronousFIFOTestbench_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/VerilogCode/AsysnchronousFIFO/AsysnchronousFIFO.sim/sim_1/behav/xsim/webtalk.log

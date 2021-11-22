@@ -17,6 +17,7 @@ verilog xil_defaultlib  \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/OneShot.v" \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/Debounce.v" \
 "../../../../AsysnchronousFIFO.srcs/sources_1/new/PED.v" \
+"../../../../AsysnchronousFIFO.srcs/sources_1/new/DebouncePED.v" \
 "../../../../AsysnchronousFIFO.srcs/sim_1/new/AsynchronousFIFOTestbench.v" \
 
 # compile glbl module

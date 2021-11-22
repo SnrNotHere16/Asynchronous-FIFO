@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Nov 21 15:20:58 2021
+| Date         : Sun Nov 21 20:05:06 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file AsynchronousFIFOTop_timing_summary_routed.rpt -pb AsynchronousFIFOTop_timing_summary_routed.pb -rpx AsynchronousFIFOTop_timing_summary_routed.rpx -warn_on_violation
 | Design       : AsynchronousFIFOTop
@@ -53,7 +53,15 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 159 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 130 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: one/q_reg[0]/Q (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: one/q_reg[1]/Q (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: one/q_reg[2]/Q (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: one/q_reg[3]/Q (HIGH)
 
  There are 10 register/latch pins with no clock driven by root clock pin: read/write/zero/clk_out_reg/Q (HIGH)
 
@@ -74,7 +82,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 420 pins that are not constrained for maximum delay. (HIGH)
+ There are 428 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

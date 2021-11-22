@@ -47,21 +47,22 @@ module AsynchronousFIFOTestbench();
             reset = 0; wdata = 0; 
             repeat (5) @ (posedge clk); reset = 1; wrst_n = 0; rrst_n = 0; 
             repeat (5) @ (posedge clk); reset = 0; wrst_n = 1; rrst_n = 1; 
-            repeat(17) @ (posedge clk) begin  //Fill up the FIFO 
-                winc = 1; 
-                wdata = $urandom; 
+            repeat (16) @ (posedge clk) begin //Fill up the FIFO 
+                repeat (200000) @ (posedge clk) begin winc = 0; end 
+                repeat(2000000) @ (posedge clk) begin  
+                    rinc = 0; 
+                    winc = 1; 
+                    wdata = $urandom; 
+                end 
             end 
-            repeat (62) @ (posedge clk) begin //Empty the FIFO
-                 winc = 0; 
-                 rinc = 1; 
-            end    
-             repeat(18) @ (posedge clk) begin  //Fill up the FIFO 
-                rinc = 0; 
-                winc = 1; 
-                wdata = $urandom; 
-            end 
-            winc = 1; 
-       //$stop; 
+            repeat (18) @ (posedge clk) begin //Empty the FIFO 
+                repeat (200000) @ (posedge clk) begin winc = 0; rinc = 0; end 
+                repeat(2000000) @ (posedge clk) begin  
+                    rinc = 1;  
+                end 
+           end 
+          repeat (10) @ (posedge clk) rinc = 0; 
+       $stop; 
        end 
     
 endmodule

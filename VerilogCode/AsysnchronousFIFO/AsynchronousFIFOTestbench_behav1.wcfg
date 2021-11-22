@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="AsynchronousFIFOTestbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="AsynchronousFIFOTestbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="370007457583334fs"></ZoomStartTime>
+      <ZoomEndTime time="370007802083335fs"></ZoomEndTime>
+      <Cursor1Time time="370007515000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/AsynchronousFIFOTestbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/one/tick" type="logic">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/winc" type="logic">
+      <obj_property name="ElementShortName">winc</obj_property>
+      <obj_property name="ObjectShortName">winc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/winc_i" type="logic">
+      <obj_property name="ElementShortName">winc_i</obj_property>
+      <obj_property name="ObjectShortName">winc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/wrst_n" type="logic">
+      <obj_property name="ElementShortName">wrst_n</obj_property>
+      <obj_property name="ObjectShortName">wrst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/rinc" type="logic">
+      <obj_property name="ElementShortName">rinc</obj_property>
+      <obj_property name="ObjectShortName">rinc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/rinc_i" type="logic">
+      <obj_property name="ElementShortName">rinc_i</obj_property>
+      <obj_property name="ObjectShortName">rinc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/rrst_n" type="logic">
+      <obj_property name="ElementShortName">rrst_n</obj_property>
+      <obj_property name="ObjectShortName">rrst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/wfull" type="logic">
+      <obj_property name="ElementShortName">wfull</obj_property>
+      <obj_property name="ObjectShortName">wfull</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/rempty" type="logic">
+      <obj_property name="ElementShortName">rempty</obj_property>
+      <obj_property name="ObjectShortName">rempty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/rdata" type="array">
+      <obj_property name="ElementShortName">rdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/a" type="logic">
+      <obj_property name="ElementShortName">a</obj_property>
+      <obj_property name="ObjectShortName">a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/b" type="logic">
+      <obj_property name="ElementShortName">b</obj_property>
+      <obj_property name="ObjectShortName">b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/c" type="logic">
+      <obj_property name="ElementShortName">c</obj_property>
+      <obj_property name="ObjectShortName">c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/d" type="logic">
+      <obj_property name="ElementShortName">d</obj_property>
+      <obj_property name="ObjectShortName">d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/e" type="logic">
+      <obj_property name="ElementShortName">e</obj_property>
+      <obj_property name="ObjectShortName">e</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/f" type="logic">
+      <obj_property name="ElementShortName">f</obj_property>
+      <obj_property name="ObjectShortName">f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/g" type="logic">
+      <obj_property name="ElementShortName">g</obj_property>
+      <obj_property name="ObjectShortName">g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/anode" type="array">
+      <obj_property name="ElementShortName">anode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">anode[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/DSIZE" type="array">
+      <obj_property name="ElementShortName">DSIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DSIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AsynchronousFIFOTestbench/ASIZE" type="array">
+      <obj_property name="ElementShortName">ASIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ASIZE[31:0]</obj_property>
+   </wvobject>
+</wave_config>
