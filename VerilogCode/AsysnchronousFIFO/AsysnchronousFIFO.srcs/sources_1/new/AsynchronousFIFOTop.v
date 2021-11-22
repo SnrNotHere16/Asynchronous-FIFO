@@ -32,5 +32,5 @@ module AsynchronousFIFOTop #(parameter DSIZE = 8, parameter ASIZE = 4)
 
     fifo1 two(.rdata(rdata), .wfull(wfull), .rempty(rempty),
               .wdata(wdata), .winc(winc_i), .wrst_n(wrst_n), .rinc(rinc_i), .rrst_n(rrst_n),
-              .wclk(clk), .rclk(clk));
+              .wclk(clk), .rclk(clk2));
 endmodule

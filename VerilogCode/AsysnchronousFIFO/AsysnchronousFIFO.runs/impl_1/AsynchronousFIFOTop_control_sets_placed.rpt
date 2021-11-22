@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Nov 22 13:04:55 2021
+| Date         : Mon Nov 22 14:17:19 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file AsynchronousFIFOTop_control_sets_placed.rpt
 | Design       : AsynchronousFIFOTop
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    38 |
+| Unused register locations in slices containing registers |    30 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -59,7 +59,7 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             170 |           44 |
+| No           | No                    | Yes                    |             170 |           46 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -77,10 +77,10 @@ Table of Contents
 |  read/write/zero/clk_out_reg_0  |                       | reset_IBUF            |                3 |             10 |
 |  write/write/zero/clk_out_reg_0 |                       | reset_IBUF            |                2 |             10 |
 |  clk_IBUF_BUFG                  | write/write1/q2_reg_0 |                       |                2 |             16 |
-|  clk_IBUF_BUFG                  |                       | two/rptr_empty/rrst_n |                4 |             20 |
-|  clk_IBUF_BUFG                  |                       | two/wptr_full/wrst_n  |                4 |             20 |
-|  n_0_47_BUFG                    |                       | reset_IBUF            |                9 |             33 |
-|  clk_IBUF_BUFG                  |                       | reset_IBUF            |               21 |             74 |
+|  n_0_47_BUFG                    |                       | two/rptr_empty/rrst_n |                5 |             20 |
+|  clk_IBUF_BUFG                  |                       | two/wptr_full/wrst_n  |                5 |             20 |
+|  n_0_47_BUFG                    |                       | reset_IBUF            |               10 |             35 |
+|  clk_IBUF_BUFG                  |                       | reset_IBUF            |               20 |             72 |
 +---------------------------------+-----------------------+-----------------------+------------------+----------------+
 
 
