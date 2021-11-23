@@ -11,15 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="370007457583334fs"></ZoomStartTime>
-      <ZoomEndTime time="370007802083335fs"></ZoomEndTime>
-      <Cursor1Time time="370007515000000fs"></Cursor1Time>
+      <ZoomStartTime time="101000535000000fs"></ZoomStartTime>
+      <ZoomEndTime time="679500535000001fs"></ZoomEndTime>
+      <Cursor1Time time="748000535000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <NameColumnWidth column_width="218"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="25" />
+   <wave_markers>
+      <marker time="372499995000000" label="" />
+   </wave_markers>
    <wvobject fp_name="/AsynchronousFIFOTestbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -63,22 +66,32 @@
    <wvobject fp_name="/AsynchronousFIFOTestbench/wfull" type="logic">
       <obj_property name="ElementShortName">wfull</obj_property>
       <obj_property name="ObjectShortName">wfull</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/AsynchronousFIFOTestbench/rempty" type="logic">
       <obj_property name="ElementShortName">rempty</obj_property>
       <obj_property name="ObjectShortName">rempty</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/wdata" type="array">
       <obj_property name="ElementShortName">wdata[7:0]</obj_property>
       <obj_property name="ObjectShortName">wdata[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/rdata" type="array">
       <obj_property name="ElementShortName">rdata[7:0]</obj_property>
       <obj_property name="ObjectShortName">rdata[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/AsynchronousFIFOTestbench/dut/two/fifomem/mem" type="array">
       <obj_property name="ElementShortName">mem[0:15][7:0]</obj_property>
       <obj_property name="ObjectShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000A0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/AsynchronousFIFOTestbench/a" type="logic">
       <obj_property name="ElementShortName">a</obj_property>
