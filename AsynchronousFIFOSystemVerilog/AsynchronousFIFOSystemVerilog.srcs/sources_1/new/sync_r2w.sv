@@ -3,7 +3,7 @@ module sync_r2w #(parameter ADDRSIZE = 4)
 				 
 				 logic [ADDRSIZE: 0] wq1_rptr; 
 				 
-				 always_ff @(posedge sync_r2w_mod.wclk, posedge sync_r2w_mod.wrst_n) begin 
+				 always_ff @(posedge sync_r2w_mod.wclk, negedge sync_r2w_mod.wrst_n) begin 
 					if (!sync_r2w_mod.wrst_n) begin 
 						{sync_r2w_mod.wq2_rptr, wq1_rptr} <= 0;
 					end 

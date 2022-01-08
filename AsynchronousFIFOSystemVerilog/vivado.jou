@@ -13,3 +13,5 @@ start_gui
 open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

@@ -8,7 +8,7 @@ module rptr_empty #(parameter ADDRSIZE = 4)
 					//------------------
 					//GRAYSTYLE2 pointer
 					//------------------
-					always_ff @ (posedge rptr_empty_mod.rclk, posedge rptr_empty_mod.rrst_n) begin 
+					always_ff @ (posedge rptr_empty_mod.rclk, negedge rptr_empty_mod.rrst_n) begin 
 						if (!rptr_empty_mod.rrst_n) begin 
 							{rbin, rptr_empty_mod.rptr} <= 0; 
 						end 
@@ -28,7 +28,7 @@ module rptr_empty #(parameter ADDRSIZE = 4)
 					//--------------------------------------------------------------
 					assign rempty_val = (rgraynext == rptr_empty_mod.rq2_wptr); 
 					
-					always_ff @ (posedge rptr_empty_mod.rclk, posedge rptr_empty_mod.rrst_n) begin 
+					always_ff @ (posedge rptr_empty_mod.rclk, negedge rptr_empty_mod.rrst_n) begin 
 						if (!rptr_empty_mod.rrst_n) begin 
 							rptr_empty_mod.rempty <= 1'b1;
 						end 

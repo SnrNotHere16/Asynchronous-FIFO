@@ -5,7 +5,7 @@ module sync_w2r #(parameter ADDRSIZE = 4)
 				 
 				 logic [ADDRSIZE: 0] rq1_wptr; 
 				 
-				 always_ff @ (posedge sync_w2r_mod.rclk, posedge sync_w2r_mod.rrst_n) begin 
+				 always_ff @ (posedge sync_w2r_mod.rclk, negedge sync_w2r_mod.rrst_n) begin 
 					if (!sync_w2r_mod.rrst_n) begin 
 						{sync_w2r_mod.rq2_wptr, rq1_wptr} <= 0; 
 					end 
