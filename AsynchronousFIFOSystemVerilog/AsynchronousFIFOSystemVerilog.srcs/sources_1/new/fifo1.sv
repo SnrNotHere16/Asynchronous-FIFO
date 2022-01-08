@@ -2,7 +2,7 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
     ( output var logic [DSIZE-1:0] rdata, 
       output var logic wfull, rempty, 
       input wire logic [DSIZE-1:0] wdata,
-      input wire logic winc, wclk, wrst_n, 
+      input wire logic wclken, wclk, wrst_n, 
       input wire logic rinc, rclk, rrst_n);
 	  
 	  // waddr - wptr_full -> fifomem, raddr - rptr_empty -> fifomem
@@ -12,10 +12,19 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
 	  logic [ASIZE: 0] wptr, rptr, wq2_rptr, rq2_wptr; 
 	  
 	  modport sync_r2w_mod(output wq2_rptr, input rptr, input wclk, wrst_n); 
-	  modport sync_w2r_mod(output rq2_wptr, input wptr, input rclk, rrst_n); 
-	  modport fifomem_mod(); 
-	  modport rptr_empty_mod(); 
-	  modport wptr_full_mod(); 
+	  
+	  modport sync_w2r_mod(output rq2_wptr, input wptr, input rclk, rrst_n);
+	  
+	  modport fifomem_mod(output rdata, input wdata, input waddr, raddr, 
+						  input wclken, output wfull, input wclk); 
+						  
+	  modport rptr_empty_mod(output rempty, 
+						     output raddr, rptr, input rq2_wptr, 
+							 input rinc, rclk, rrst_n); 
+							 
+	  modport wptr_full_mod(output wfull, 
+							output waddr, wptr, input wq2_rptr,
+							input winc, wclk, wrst_n); 
 
 
 endinterface: fifo1Inter
