@@ -5,11 +5,14 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
       input wire logic winc, wclk, wrst_n, 
       input wire logic rinc, rclk, rrst_n);
 	  
+	  // waddr - wptr_full -> fifomem, raddr - rptr_empty -> fifomem
 	  logic [ASIZE-1: 0] waddr, raddr; 
+	  // wptr - wptr_full -> sync_w2r, rptr - rptr_empty -> sync_r2w
+	  // wq2_rptr - sync_r2w -> wptr_full, rq2_wptr - sync_w2r -> rptr_empty
 	  logic [ASIZE: 0] wptr, rptr, wq2_rptr, rq2_wptr; 
 	  
 	  modport sync_r2w_mod(output wq2_rptr, input rptr, input wclk, wrst_n); 
-	  modport sync_w2r_mod(); 
+	  modport sync_w2r_mod(output rq2_wptr, input wptr, input rclk, rrst_n); 
 	  modport fifomem_mod(); 
 	  modport rptr_empty_mod(); 
 	  modport wptr_full_mod(); 
