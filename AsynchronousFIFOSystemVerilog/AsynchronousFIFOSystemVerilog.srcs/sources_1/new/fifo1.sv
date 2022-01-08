@@ -2,7 +2,7 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
     ( output var logic [DSIZE-1:0] rdata, 
       output var logic wfull, rempty, 
       input wire logic [DSIZE-1:0] wdata,
-      input wire logic wclken, wclk, wrst_n, 
+      input wire logic wclken, winc, wclk, wrst_n, //winc = wclken
       input wire logic rinc, rclk, rrst_n);
 	  
 	  // waddr - wptr_full -> fifomem, raddr - rptr_empty -> fifomem
@@ -32,7 +32,7 @@ endinterface: fifo1Inter
 module fifo1 #(parameter DSIZE = 8, 
 			  parameter ASIZE = 4) 
 	(
-		output var logic [DSIZE-1:0] radata, 
+		output var logic [DSIZE-1:0] rdata, 
 		output var logic wfull, 
 		output var logic rempty, 
 		input wire logic [DSIZE-1:0] wdata, 
@@ -41,7 +41,10 @@ module fifo1 #(parameter DSIZE = 8,
 	);
 	
 	
-
+	fifo1Inter fifo1Interface (.rdata(rdata), .wfull(wfull), .rempty(rempty), 
+							   .wdata(wdata), .wclken(winc), .winc(winc), .wclk(wclk), .wrst_n(wrst_n), 
+							   .rinc(rinc), .rclk(rclk), .rrst_n(rrst_n)); 
+	
 	sync_r2w sync_r2w ();
 	
 	sync_w2r  sync_w2r (); 
