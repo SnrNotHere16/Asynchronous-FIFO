@@ -45,15 +45,15 @@ module fifo1 #(parameter DSIZE = 8,
 							   .wdata(wdata), .wclken(winc), .winc(winc), .wclk(wclk), .wrst_n(wrst_n), 
 							   .rinc(rinc), .rclk(rclk), .rrst_n(rrst_n)); 
 	
-	sync_r2w sync_r2w ();
+	sync_r2w sync_r2w (.r2w(fifo1Interface.sync_r2w_mod));
 	
-	sync_w2r  sync_w2r (); 
+	sync_w2r  sync_w2r (.w2r(fifo1Interface.sync_w2r_mod)); 
 	
 	
-	fifomem   fifomem();
+	fifomem   fifomem(.fifo(fifo1Interface.fifomem_mod));
 
-	rptr_empty rptr_empty(); 
+	rptr_empty rptr_empty(.rptr_e(fifo1Interface.rptr_empty_mod)); 
 	
-	wptr_full wptr_full (); 
+	wptr_full wptr_full (.wptr_f(fifo1Interface.wptr_full_mod)); 
 
 endmodule: fifo1 
