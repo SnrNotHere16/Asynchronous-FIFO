@@ -8,7 +8,7 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
 	  logic [ASIZE-1: 0] waddr, raddr; 
 	  logic [ASIZE: 0] wptr, rptr, wq2_rptr, rq2_wptr; 
 	  
-	  modport sync_r2w_mod(); 
+	  modport sync_r2w_mod(output wq2_rptr, input rptr, input wclk, wrst_n); 
 	  modport sync_w2r_mod(); 
 	  modport fifomem_mod(); 
 	  modport rptr_empty_mod(); 
