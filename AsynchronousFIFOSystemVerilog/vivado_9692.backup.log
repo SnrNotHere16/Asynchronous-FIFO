@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Jan  8 11:22:19 2022
+# Process ID: 9692
+# Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14020 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\AsynchronousFIFOSystemVerilog\AsynchronousFIFOSystemVerilog.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 879.184 ; gain = 216.930
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  8 13:14:06 2022...

@@ -1,0 +1,167 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 15152
+License: Customer
+
+Current time: 	Mon Jan 10 10:47:38 PST 2022
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 150
+Available screens: 1
+Available disk space: 42 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=18
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	OAkun
+User home directory: C:/Users/OAkun
+User working directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.log
+Vivado journal file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.jou
+Engine tmp dir: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/.Xil/Vivado-15152-DESKTOP-NDOLUA7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 604 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\AsynchronousFIFOSystemVerilog\AsynchronousFIFOSystemVerilog.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 52 MB. Current time: 1/10/22, 10:47:40 AM PST
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+63553kb) [00:00:20]
+// [Engine Memory]: 760 MB (+645106kb) [00:00:20]
+// [GUI Memory]: 75 MB (+9253kb) [00:00:20]
+// [GUI Memory]: 100 MB (+22784kb) [00:00:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  3502 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// Project name: AsynchronousFIFOSystemVerilog; location: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 823.090 ; gain = 197.129 
+dismissDialog("Open Project"); // by (cl)
+// [GUI Memory]: 118 MB (+12764kb) [00:00:25]
+// [Engine Memory]: 803 MB (+5319kb) [00:00:25]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo1 (fifo1.sv)]", 1); // B (F, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1451 ms.
+// Elapsed time: 44 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "AsynchronousFIFOTB"); // Y (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 27 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// by (cl):  Add Simulation Sources  : addNotify
+// Tcl Message: close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv 
+// I (cl): Define Module: addNotify
+dismissDialog("Add Simulation Sources"); // by (cl)
+// Elapsed time: 48 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 210 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, fifo1 (fifo1.sv)]", 10, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, AsynchronousFIFOTB (AsynchronousFIFOTB.sv)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, AsynchronousFIFOTB (AsynchronousFIFOTB.sv)]", 11, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectCodeEditor("AsynchronousFIFOTB.sv", 30, 245); // cl (w, cl)
+selectCodeEditor("AsynchronousFIFOTB.sv", 211, 131); // cl (w, cl)
+selectCodeEditor("AsynchronousFIFOTB.sv", 113, 233); // cl (w, cl)
+selectCodeEditor("AsynchronousFIFOTB.sv", 106, 232); // cl (w, cl)
+selectCodeEditor("AsynchronousFIFOTB.sv", 103, 232); // cl (w, cl)
+selectCodeEditor("AsynchronousFIFOTB.sv", 40, 204); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
