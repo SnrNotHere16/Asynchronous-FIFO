@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_w2r.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sources_1/new/wptr_full.sv" \
+"../../../../AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
