@@ -27,6 +27,17 @@ module SevenSegmentDisplayController(input wire logic clk, reset,
 									 input wire logic [31:0] data,
 									 output var logic a, b, c, d, e, f,g, 
 									 output var logic [7:0] anode);
+									 
+	//Interface instantiation 
+	SevSegDispConInter SevSegDispConInterface(.*); 
+	//Creates a clock pulse for pixel frequencey 
+	PixelClock zero(.PixelClock_mod(SevSegDispConInterface.PixelClock_mod)); 
+	//Selects which anode(0-7) to display 
+	PixelController one(.PixelController_mod(SevSegDispConInterface.PixelController_mod)); 
+	//Selects which nibble to display of the data sent
+	Admux two(.AdMux_mod(SevSegDispConInterface.AdMux_mod)); 
+	//Displays a nibble of data 
+	HexToSevenSeg_mod(.HexToSevenSeg_mod(SevSegDispConInterface.HexToSevenSeg_mod)); 
 	
 	
 	
