@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jan 10 10:47:14 2022
+# Process ID: 15152
+# Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9772 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\AsynchronousFIFOSystemVerilog\AsynchronousFIFOSystemVerilog.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr
+update_compile_order -fileset sources_1
+file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv w ]
+add_files -fileset sim_1 C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source AsynchronousFIFOTB.tcl
+close_sim

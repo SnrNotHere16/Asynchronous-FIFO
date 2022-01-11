@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jan 10 10:47:14 2022
+# Process ID: 15152
+# Current directory: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9772 C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\AsynchronousFIFOSystemVerilog\AsynchronousFIFOSystemVerilog.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 823.090 ; gain = 197.129
+update_compile_order -fileset sources_1
+file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv w ]
+add_files -fileset sim_1 C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'AsynchronousFIFOTB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj AsynchronousFIFOTB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_w2r.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/wptr_full.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AsynchronousFIFOTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xelab -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'r2w' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:48]
+ERROR: [VRFC 10-3180] cannot find port 'w2r' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:50]
+ERROR: [VRFC 10-3180] cannot find port 'fifo' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:53]
+ERROR: [VRFC 10-3180] cannot find port 'rptr_e' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:55]
+ERROR: [VRFC 10-3180] cannot find port 'wptr_f' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:57]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'AsynchronousFIFOTB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj AsynchronousFIFOTB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_w2r.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/wptr_full.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AsynchronousFIFOTB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xelab -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'w2r' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:50]
+ERROR: [VRFC 10-3180] cannot find port 'fifo' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:53]
+ERROR: [VRFC 10-3180] cannot find port 'rptr_e' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:55]
+ERROR: [VRFC 10-3180] cannot find port 'wptr_f' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:57]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'AsynchronousFIFOTB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj AsynchronousFIFOTB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_w2r.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/wptr_full.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AsynchronousFIFOTB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xelab -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'rptr_e' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:55]
+ERROR: [VRFC 10-3180] cannot find port 'wptr_f' on this module [C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv:57]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'AsynchronousFIFOTB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj AsynchronousFIFOTB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifomem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rptr_empty
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_r2w
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_w2r.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_w2r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/wptr_full.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wptr_full
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AsynchronousFIFOTB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+"xelab -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 37f00cbfb2f4438aab249c2467530e24 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot AsynchronousFIFOTB_behav xil_defaultlib.AsynchronousFIFOTB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" Line 32. Module fifo1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifo1.sv" Line 1. Module fifo1Inter doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/sync_r2w.sv" Line 1. Module sync_r2w(sync_r2w_mod=fifo1Inter_sync_r2w_mod) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/fifomem.sv" Line 1. Module fifomem(fifomem_mod=fifo1Inter_fifomem_mod) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/rptr_empty.sv" Line 1. Module rptr_empty(rptr_empty_mod=fifo1Inter_rptr_empty_mod) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fifo1Inter
+Compiling module xil_defaultlib.sync_r2w(sync_r2w_mod=fifo1Inter...
+Compiling module xil_defaultlib.sync_w2r(sync_w2r_mod=fifo1Inter...
+Compiling module xil_defaultlib.fifomem(fifomem_mod=fifo1Inter_f...
+Compiling module xil_defaultlib.rptr_empty(rptr_empty_mod=fifo1I...
+Compiling module xil_defaultlib.wptr_full(wptr_full_mod=fifo1Int...
+Compiling module xil_defaultlib.fifo1
+Compiling module xil_defaultlib.AsynchronousFIFOTB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot AsynchronousFIFOTB_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/xsim.dir/AsynchronousFIFOTB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim/xsim.dir/AsynchronousFIFOTB_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Jan 10 11:10:13 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Jan 10 11:10:13 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 867.090 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "AsynchronousFIFOTB_behav -key {Behavioral:sim_1:Functional:AsynchronousFIFOTB} -tclbatch {AsynchronousFIFOTB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source AsynchronousFIFOTB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /AsynchronousFIFOTB/verif_data_q was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+Checking rdata: expected wdata = 07, rdata = 07
+Checking rdata: expected wdata = 1a, rdata = 1a
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'AsynchronousFIFOTB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 895.906 ; gain = 28.816
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 903.680 ; gain = 7.773
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 10 12:34:40 2022...

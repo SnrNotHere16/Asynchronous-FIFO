@@ -4,10 +4,10 @@ Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
 SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
 IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
 
-Process ID (PID): 15152
+Process ID (PID): 12096
 License: Customer
 
-Current time: 	Mon Jan 10 10:47:38 PST 2022
+Current time: 	Mon Jan 10 18:56:16 PST 2022
 Time zone: 	Pacific Standard Time (America/Los_Angeles)
 
 OS: Windows 10
@@ -46,7 +46,7 @@ Vivado layouts directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/la
 PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
 Vivado log file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.log
 Vivado journal file location: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/vivado.jou
-Engine tmp dir: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/.Xil/Vivado-15152-DESKTOP-NDOLUA7
+Engine tmp dir: 	C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/.Xil/Vivado-12096-DESKTOP-NDOLUA7
 
 Xilinx Environment Variables
 ----------------------------
@@ -60,19 +60,21 @@ XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
 
 GUI allocated memory:	154 MB
 GUI max memory:		3,072 MB
-Engine allocated memory: 604 MB
+Engine allocated memory: 601 MB
 
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 */
 
 // TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1288 ms.
 // Tcl Message: start_gui 
 // TclEventType: PROJECT_OPEN_DIALOG
 // by (cl):  Open Project : addNotify
 // Opening Vivado Project: C:\Users\OAkun\Documents\GitHub\Asynchronous-FIFO\AsynchronousFIFOSystemVerilog\AsynchronousFIFOSystemVerilog.xpr. Version: Vivado v2019.1 
 // TclEventType: DEBUG_PROBE_SET_CHANGE
 // Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 614 MB. GUI used memory: 53 MB. Current time: 1/10/22, 6:56:19 PM PST
 // TclEventType: MSGMGR_MOVEMSG
 // TclEventType: FILE_SET_NEW
 // TclEventType: RUN_CURRENT
@@ -89,79 +91,108 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 52 MB. Current time: 1/10/22, 10:47:40 AM PST
 // TclEventType: PROJECT_NEW
 // Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.xpr 
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
 // TclEventType: PROJECT_NEW
-// [GUI Memory]: 63 MB (+63553kb) [00:00:20]
-// [Engine Memory]: 760 MB (+645106kb) [00:00:20]
-// [GUI Memory]: 75 MB (+9253kb) [00:00:20]
-// [GUI Memory]: 100 MB (+22784kb) [00:00:21]
-// WARNING: HEventQueue.dispatchEvent() is taking  3502 ms.
+// [GUI Memory]: 64 MB (+64674kb) [00:00:21]
+// [Engine Memory]: 761 MB (+646760kb) [00:00:21]
+// [GUI Memory]: 76 MB (+9197kb) [00:00:21]
+// [GUI Memory]: 101 MB (+22201kb) [00:00:22]
+// WARNING: HEventQueue.dispatchEvent() is taking  4535 ms.
 // Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
 // Project name: AsynchronousFIFOSystemVerilog; location: C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog; part: xc7a100tcsg324-1
-// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 823.090 ; gain = 197.129 
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 815.539 ; gain = 184.562 
 dismissDialog("Open Project"); // by (cl)
-// [GUI Memory]: 118 MB (+12764kb) [00:00:25]
-// [Engine Memory]: 803 MB (+5319kb) [00:00:25]
+// [GUI Memory]: 110 MB (+4325kb) [00:00:29]
+// [Engine Memory]: 801 MB (+2164kb) [00:00:29]
 // Tcl Message: update_compile_order -fileset sources_1 
-// Elapsed time: 11 seconds
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo1 (fifo1.sv)]", 1); // B (F, cl)
-// WARNING: HEventQueue.dispatchEvent() is taking  1451 ms.
-// Elapsed time: 44 seconds
+// Elapsed time: 237 seconds
 selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
 // Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
 // c (cl): Add Sources: addNotify
-selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
 selectButton("NEXT", "Next >"); // JButton (j, c)
 selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
 // F (c): Create Source File: addNotify
 selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
-setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "AsynchronousFIFOTB"); // Y (Q, F)
-selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
-// Tcl Command: 'file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new'
+// Elapsed time: 13 seconds
 dismissDialog("Create Source File"); // F (c)
-// Tcl Message: file mkdir C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new 
+// 'h' command handler elapsed time: 21 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo1 (fifo1.sv)]", 1); // B (F, cl)
+// PAPropertyPanels.initPanels (fifomem.sv) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo1 (fifo1.sv), fifomem : fifomem (fifomem.sv)]", 4, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo1 (fifo1.sv), fifomem : fifomem (fifomem.sv)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+// [GUI Memory]: 119 MB (+3807kb) [00:05:00]
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH, cl)
+selectCodeEditor("fifomem.sv", 494, 61); // cl (w, cl)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 351ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 318 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // az
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "Verilog Header", 1); // cm (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cm (Q, F)
+// Elapsed time: 11 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "SevenSegmentDisplayController"); // Y (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
 selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
 // F (c): Create Source File: addNotify
 selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
 dismissDialog("Create Source File"); // F (c)
 selectButton("FINISH", "Finish"); // JButton (j, c)
-// 'h' command handler elapsed time: 27 seconds
+// 'h' command handler elapsed time: 22 seconds
 dismissDialog("Add Sources"); // c (cl)
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: FILE_SET_OPTIONS_CHANGE
-// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
-// by (cl):  Add Simulation Sources  : addNotify
-// Tcl Message: close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv w ] 
+// Tcl Message: close [ open C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/SevenSegmentDisplayController.sv w ] 
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
-// Tcl Message: add_files -fileset sim_1 C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv 
+// Tcl Message: add_files C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sources_1/new/SevenSegmentDisplayController.sv 
 // I (cl): Define Module: addNotify
-dismissDialog("Add Simulation Sources"); // by (cl)
-// Elapsed time: 48 seconds
 selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
 // TclEventType: FILE_SET_CHANGE
 selectButton("OptionPane.button", "Yes"); // JButton (A, H)
 dismissDialog("Define Module"); // I (cl)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
-// Tcl Message: update_compile_order -fileset sim_1 
-// Elapsed time: 210 seconds
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8, true); // B (F, cl) - Node
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9, true); // B (F, cl) - Node
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, fifo1 (fifo1.sv)]", 10, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, AsynchronousFIFOTB (AsynchronousFIFOTB.sv)]", 11, false); // B (F, cl)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, AsynchronousFIFOTB (AsynchronousFIFOTB.sv)]", 11, false, false, false, false, false, true); // B (F, cl) - Double Click
-selectCodeEditor("AsynchronousFIFOTB.sv", 30, 245); // cl (w, cl)
-selectCodeEditor("AsynchronousFIFOTB.sv", 211, 131); // cl (w, cl)
-selectCodeEditor("AsynchronousFIFOTB.sv", 113, 233); // cl (w, cl)
-selectCodeEditor("AsynchronousFIFOTB.sv", 106, 232); // cl (w, cl)
-selectCodeEditor("AsynchronousFIFOTB.sv", 103, 232); // cl (w, cl)
-selectCodeEditor("AsynchronousFIFOTB.sv", 40, 204); // cl (w, cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 822 MB. GUI used memory: 60 MB. Current time: 1/10/22, 7:07:09 PM PST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 178 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SevenSegmentDisplayController (SevenSegmentDisplayController.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SevenSegmentDisplayController (SevenSegmentDisplayController.sv)]", 7, false); // B (F, cl)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SevenSegmentDisplayController (SevenSegmentDisplayController.sv)]", 7, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SevenSegmentDisplayController (SevenSegmentDisplayController.sv)]", 7, false, false, false, false, false, true); // B (F, cl) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 349 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 500 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
 selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
