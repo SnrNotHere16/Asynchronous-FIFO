@@ -1,5 +1,5 @@
 interface dut_if(); 
-	
+	logic clk0, clk1; 
 	modport tb(); 
 	modport dut(); 
 
