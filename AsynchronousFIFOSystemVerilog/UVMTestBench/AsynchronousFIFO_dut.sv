@@ -10,6 +10,7 @@ fifo1 #(parameter DSIZE = 8,
 		input wire logic [DSIZE-1:0] wdata, 
 		input wire logic winc, wclk, wrst_n, 
 		input wire logic rinc, rclk, rrst_n 
+		//
 	);
 */
 fifo1 dut(
