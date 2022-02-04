@@ -15,8 +15,30 @@ package  my_testbench_pkg;
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
 		endfunction: new 
-	
-	
+		
+		function void build_phase(uvm_phase phase); 
+			driver = my_driver::type_id::create("driver", this); 
+			sequencer =
+        uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
+		endfunction: build_phase 
+		
+		//In UVM connect phase, we connect the sequencer to the driver. 
+		function void connect_phase (); 
+			driver.seq_item_export.connect(sequencer.seq_item_export);
+		endfunction: connect_phase
+		
+		task run_phase (uvm_phase phase); 
+			//we raise the objection to keep the test from completing 
+			phase.raise_objection(this); 
+			begin 
+				my_sequence seq; 
+				seq = my_sequence::type_id::create("seq");
+				seq.start(sequencer); 
+			end 
+			//We drop objection to allow the test to complete
+			phase.drop_objection(this); 
+		
+		endtask: run_phase 
 	
 	endclass: my_agent
 
@@ -56,12 +78,6 @@ package  my_testbench_pkg;
 			phase.drop_objection(this); 
 		endtask: run_phase
 	endclass: my_test 
-
-
-
-
-
-
 
 
 endpackage: my_testbench_pkg
