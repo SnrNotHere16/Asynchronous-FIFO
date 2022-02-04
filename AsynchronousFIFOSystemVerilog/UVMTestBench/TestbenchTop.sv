@@ -1,84 +1,53 @@
-package  my_testbench_pkg;
-	import uvm_pkg::*; 
+interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
+
+  logic [DSIZE-1:0] rdata; 
+	logic wfull; 
+	logic rempty; 
+	logic [DSIZE-1:0] wdata; 
+	logic winc, wclk, wrst_n; 
+	logic rinc, rclk, rrst_n; 
 	
+endinterface: dut_if 
+
+`include "uvm_macros.svh"
+`include "my_testbench_pkg.svh"
+
+module TestBenchTop (); 
+
+
+	import uvm_pkg::*;
+	import my_testbench_pkg::*;
 	
-  `include "my_sequence.svh"
-  `include "my_driver.svh"
-
+	dut_if _if(); 
+	fifo1 dut(
+		.rdata(_if.rdata), 
+		.wfull(_if.wfull), 
+	    .rempty(_if.rempty), 
+		.wdata(_if.wdata), 
+		.winc(_if.winc), .wclk(_if.wclk), .wrst_n(_if.wrst_n), 
+		.rinc(_if.rinc), .rclk(_if.rclk), .rrst_n(_if.rrst_n) 
+	);
 	
+	//clock generator 
+	initial begin 
+		_if.wclk = 0; 
+		_if.rclk = 0; 
+		fork 
+			forever #10ns _if.wclk = ~_if.wclk; 
+			forever #35ns _if.rclk = ~_if.rclk; 
+		join
+	end 
 	
-	class my_agent extends uvm_agent; 
-		`uvm_component_utils(my_agent)
-		my_driver driver; 
-		uvm_sequencer#
-		(my_transaction) sequencer;
-		
-		function new(string name, uvm_component parent);
-			super.new(name, parent);
-		endfunction: new
-		
-		function void build_phase(uvm_phase phase); 
-			driver = my_driver::type_id::create("driver", this); 
-			sequencer =
-        uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
-		endfunction: build_phase 
-		
-		//In UVM connect phase, we connect the sequencer to the driver. 
-      function void connect_phase (uvm_phase phase); 
-			driver.seq_item_export.connect(sequencer.seq_item_export);
-		endfunction: connect_phase
-		
-		task run_phase (uvm_phase phase); 
-			//we raise the objection to keep the test from completing 
-			phase.raise_objection(this); 
-			begin 
-				my_sequence seq; 
-				seq = my_sequence::type_id::create("seq");
-				seq.start(sequencer); 
-			end 
-			//We drop objection to allow the test to complete
-			phase.drop_objection(this); 
-		
-		endtask: run_phase 
+
+	initial begin 
+		 // Place the interface into the UVM configuration database
+		uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", _if);
+		run_test("my_test"); 
+	end 
 	
-	endclass: my_agent
+	initial begin 
+		$dumpfile("dump.vcd");
+      $dumpvars(0, TestBenchTop);
+	end 
 
-
-
-	class my_env extends uvm_env; 
-		`uvm_component_utils(my_env)
-		my_agent agent; 
-		
-		function new(string name, uvm_component parent);
-			super.new(name, parent);
-		endfunction: new
-	
-		function void build_phase(uvm_phase phase); 
-			agent = my_agent::type_id::create("agent", this); 
-		endfunction: build_phase
-	endclass: my_env
-
-	class my_test extends uvm_test; 
-		`uvm_component_utils(my_test)
-		my_env env; 
-		
-		function new(string name, uvm_component parent);
-			super.new(name, parent);
-		endfunction: new
-		
-		function void build_phase(uvm_phase phase); 
-			env = my_env::type_id::create("env", this); 
-		endfunction: build_phase 
-		
-		task run_phase(uvm_phase phase); 
-			//We raise objection to keep the test from completing 
-			phase.raise_objection(this); 
-			#10; 
-			`uvm_warning("", "Hello World!")
-			//We drop objection to allow the test to complete 
-			phase.drop_objection(this); 
-		endtask: run_phase
-	endclass: my_test 
-
-
-endpackage: my_testbench_pkg
+endmodule: TestBenchTop
