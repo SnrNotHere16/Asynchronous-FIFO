@@ -14,7 +14,7 @@ endclass: my_transaction
 
 
 class my_sequence extends uvm_sequence# (my_transaction) 
-	`uvm_object_utils(my_sequence); 
+	`uvm_object_utils(my_sequence)
 	
 	function new (string name = ""); 
 		super.new(name); 
