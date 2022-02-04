@@ -41,8 +41,8 @@ module TestBenchTop ();
 
 	initial begin 
 		 // Place the interface into the UVM configuration database
-		//uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", _if);
-		//run_test("my_test"); 
+		uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", _if);
+		run_test("my_test"); 
 	end 
 	
 	initial begin 
