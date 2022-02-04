@@ -13,7 +13,7 @@ class my_transaction extends uvm_sequence_item;
 endclass: my_transaction 
 
 
-class my_sequence extends uvm_sequence# (my_transaction) 
+class my_sequence extends uvm_sequence #(my_transaction);
 	`uvm_object_utils(my_sequence)
 	
 	function new (string name = ""); 
@@ -32,6 +32,5 @@ class my_sequence extends uvm_sequence# (my_transaction)
 		    finish_item(req);
 	end 
 	endtask: body 
-endclass my_sequence
-
+endclass: my_sequence
 
