@@ -15,7 +15,9 @@ class my_driver extends uvm_driver #(my_transaction);
 	end
   endfunction: build_phase
   
-  task run_phase (); 
+  task run_phase (uvm_phase phase); 
+    int g; 
+    g = 45;
 	//First toggle reset 
 	/*
 	 dut_vif.reset = 1;
