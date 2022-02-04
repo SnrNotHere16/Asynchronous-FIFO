@@ -9,10 +9,15 @@ interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) ();
 	
 endinterface: dut_if 
 
+`include "uvm_macros.svh"
+`include "my_testbench_pkg.svh"
+
 module TestBenchTop (); 
 
-	//import uvm_pkg::*; 
-	//import my_pkg::*;
+
+	import uvm_pkg::*;
+	import my_testbench_pkg::*;
+	
 	dut_if _if(); 
 	fifo1 dut(
 		.rdata(_if.rdata), 
@@ -23,7 +28,7 @@ module TestBenchTop ();
 		.rinc(_if.rinc), .rclk(_if.rclk), .rrst_n(_if.rrst_n) 
 	);
 	
-	
+	//clock generator 
 	initial begin 
 		_if.wclk = 0; 
 		_if.rclk = 0; 
@@ -35,7 +40,14 @@ module TestBenchTop ();
 	
 
 	initial begin 
-		//run_test(); //name of the test class 
+		 // Place the interface into the UVM configuration database
+		//uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", _if);
+		//run_test("my_test"); 
+	end 
+	
+	initial begin 
+		$dumpfile("dump.vcd");
+		$dumpvars(0, top);
 	end 
 
 endmodule: TestBenchTop
