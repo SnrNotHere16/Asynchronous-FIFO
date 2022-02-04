@@ -1,8 +1,12 @@
-interface dut_if(); 
-	logic clk0, clk1; 
-	modport tb(); 
-	modport dut(); 
+interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
 
+	logic [DSZIE-1:0] rdata; 
+	logic wfull; 
+	logic rempty; 
+	logic [DSIZE-1:0] wdata; 
+	logic winc, wclk, wrst_n; 
+	logic rinc, rclk, rrst_n; 
+	
 endinterface: dut_if 
 
 module TestBenchTop (); 
@@ -10,14 +14,22 @@ module TestBenchTop ();
 	//import uvm_pkg::*; 
 	//import my_pkg::*;
 	dut_if _if(); 
-	AsynchronousFIFO_dut dut (.dut_inter(_if.dut));
+	fifo1 dut(
+		.rdata(), 
+		.wfull(), 
+	    .rempty(), 
+		.wdata(), 
+		.winc(), .wclk(), .wrst_n(), 
+		.rinc(), .rclk(), .rrst_n() 
+	);
+	//AsynchronousFIFO_dut dut (.dut_inter(_if.dut));
 	
 	initial begin 
-		//wclk = 0; 
-		//rclk = 0; 
+		_if.wclk = 0; 
+		_if.rclk = 0; 
 		fork 
-			//forever #10ns wclk = ~wclk; 
-			//forever #35ns rclk = ~rclk; 
+			forever #10ns _if.wclk = ~_if.wclk; 
+			forever #35ns rclk = ~_if.rclk; 
 		join
 	end 
 	
