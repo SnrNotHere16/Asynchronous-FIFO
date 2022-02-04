@@ -15,14 +15,14 @@ module TestBenchTop ();
 	//import my_pkg::*;
 	dut_if _if(); 
 	fifo1 dut(
-		.rdata(), 
-		.wfull(), 
-	    .rempty(), 
-		.wdata(), 
-		.winc(), .wclk(), .wrst_n(), 
-		.rinc(), .rclk(), .rrst_n() 
+		.rdata(_if.rdata), 
+		.wfull(_if.wfull), 
+	    .rempty(_if.rempty), 
+		.wdata(_if.wdata), 
+		.winc(_if.winc), .wclk(_if.wclk), .wrst_n(_if.wrst_n), 
+		.rinc(_if.rinc), .rclk(_if.rclk), .rrst_n(_if.rrst_n) 
 	);
-	//AsynchronousFIFO_dut dut (.dut_inter(_if.dut));
+	
 	
 	initial begin 
 		_if.wclk = 0; 
