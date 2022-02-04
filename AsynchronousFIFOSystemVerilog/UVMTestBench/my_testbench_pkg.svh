@@ -2,8 +2,9 @@ package  my_testbench_pkg;
 	import uvm_pkg::*; 
 	
 	
-	`include "my_sequence.svh"
-	`include "my_driver.shv" 
+  `include "my_sequence.svh"
+  `include "my_driver.svh"
+
 	
 	
 	class my_agent extends uvm_agent; 
@@ -14,7 +15,7 @@ package  my_testbench_pkg;
 		
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
-		endfunction: new 
+		endfunction: new
 		
 		function void build_phase(uvm_phase phase); 
 			driver = my_driver::type_id::create("driver", this); 
@@ -23,8 +24,10 @@ package  my_testbench_pkg;
 		endfunction: build_phase 
 		
 		//In UVM connect phase, we connect the sequencer to the driver. 
-		function void connect_phase (); 
-			driver.seq_item_export.connect(sequencer.seq_item_export);
+      function void connect_phase (uvm_phase phase); 
+			driver.seq_item_port.connect(sequencer.seq_item_export);
+        	//      driver.seq_item_port.connect(sequencer.seq_item_export);
+
 		endfunction: connect_phase
 		
 		task run_phase (uvm_phase phase); 
@@ -44,13 +47,13 @@ package  my_testbench_pkg;
 
 
 
-	class my_env extends umv_env; 
+	class my_env extends uvm_env; 
 		`uvm_component_utils(my_env)
 		my_agent agent; 
 		
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
-		endfunction: new 
+		endfunction: new
 	
 		function void build_phase(uvm_phase phase); 
 			agent = my_agent::type_id::create("agent", this); 
@@ -63,7 +66,7 @@ package  my_testbench_pkg;
 		
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
-		endfunction: new 
+		endfunction: new
 		
 		function void build_phase(uvm_phase phase); 
 			env = my_env::type_id::create("env", this); 
