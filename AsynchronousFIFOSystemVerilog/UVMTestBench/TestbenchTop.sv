@@ -58,7 +58,7 @@ This is a basic UVM "Hello World" testbench.
 Explanation of this testbench on YouTube:
 https://www.youtube.com/watch?v=Qn6SvG-Kya0
 *******************************************/
-
+/*
 `include "uvm_macros.svh"
 `include "my_testbench_pkg.svh"
 
@@ -94,3 +94,4 @@ module top;
   end
   
 endmodule
+*/
