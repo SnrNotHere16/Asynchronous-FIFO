@@ -1,20 +1,3 @@
-/*
-File: sync_r2w.sv - read-domain to write-domain synchronizer 
-	This a synchronizer module that is used to synchronize the read pointer into the write-clock domain. 
- The synchronized read pointer will be used by the wptr_full module to generate the FIFO full condition. 
- This module only contains flip-flops that are synchronized to the real clock. No other logic is 
- included in this module. 
- 
-	This is a simple synchronizer module, used to pass an n-bit pointer from the read clock domain 
- to the write clock domain, through a pair of registers that are clocked by the FIFO write clock. 
- Notice the simplicity of the always block that concatenates the two registers together for reset 
- and shifting. The synchronizer always block is only three lines of code. 
- 
- All module outputs are registerd for simplified synthesis using time budgeting. All outputs of 
- this module are entirely synchronous to the wclk and all asynchronous inputs to this module are 
- from the rclk domain with all signals named using an "r" prefix, making it easy to set a false path 
- on all "r*" signlas for simplified static timing analysis. 
-*/
 module sync_r2w #(parameter ADDRSIZE = 4)
 				 (fifo1Inter sync_r2w_mod); 
 				 
@@ -34,23 +17,6 @@ module sync_r2w #(parameter ADDRSIZE = 4)
 
 endmodule: sync_r2w
 
-/*
-File: sync_w2r.sv - Write-domain to read-domain synchronizer
-	This is a synchronizer module that is used to synchronize the read pointer into the write-clok
-domain. The synchronized write pointer will be used by the rptr_empty module to generate the FIFO
-empty condition. This module only contains flip-flops that are synthesized to the read clock. No 
-other logic is included in this module. 
-
-	This is a simple syncrhonizer module, used to pass an n-bit pointer from the write clock domain
-to the read clock domain, through a pair of registers that are clocked by the FIFO read clock. 
-Notice the simplicity of the always block that concatenates the two registers together for reset 
-and shifting. The synchronizer always block is only three lines of code. 
-
-All module outputs are registerd for simplified synthesis using time budgeting. All outputs of
-this module are entirely synchronous to the rclk and all asynchronous inputs to this module are
-from the wclk domain with all signals named using an "w" prefix, making it easy to set a false 
-path on all "w*" signals for simplified staitc timing analysis. 
-*/
 module sync_w2r #(parameter ADDRSIZE = 4)
 				 (fifo1Inter sync_w2r_mod);
 				 
@@ -66,23 +32,6 @@ module sync_w2r #(parameter ADDRSIZE = 4)
 				 end 
 endmodule: sync_w2r 
 
-/*
-File: fifomem.sv - FIFO memory buffer 
-	This is the FIFO memory buffer that is accessed by both the read write and read clock domains. 
-This buffer is most likely an instantiated, synchronous dual-port RAM. Other memory styles can 
-be adapted to functions as the FIFO buffer. 
-
-	The FIFO memory buffer is typically an instantiated ASIC or FPGA dual-port, synchronous memory
-device. The memory buffer could also be synthesized to ASIC or FPGA registers using RTL code in
-this module. 
-
-About an instantiated vendor RAM versus a Verilog-declared RAM, the Synopsys DesignWare team did 
-internal analysis and found that for sizes up to 256 bits, there is no lost area or performance 
-using the Verilog-declared RAM compared to an instantiated vendor RAM. 
-
-If a vendor RAM is instatiated, it is highly recommended that the instantiation be done using 
-named port connections. 
-*/
 module fifomem #(parameter DATASIZE = 8, 
 				 parameter ADDRSIZE = 4)
 				 (fifo1Inter fifomem_mod);
@@ -103,21 +52,6 @@ module fifomem #(parameter DATASIZE = 8,
 				 
 endmodule: fifomem
 
-/*
-File: rptr_empty.sv - Read pointer & empty generation logic
-	This module is completely synchronous to the read-clock domain and contains the FIFO read pointer 
-and empty-flag logic. 
-
-	This module encloses all of the FIFO logic that is generated within the read clock domain (except 
-synchronizers). The read pointer is a dual n-bit Gray code counter. The n-bit pointer(rptr) is passed 
-to the write clock domain through the sync_r2w module. The (n-1)-bit pointer (raddr) is used to 
-address the FIFO buffer. 
-
-The FIFO empty output is registered and is asserted on the next rising rclk edge when the next rptr
-value equals the synchronized wprt value. All module outputs are registerd for simplified synthesis
-using time budgeting. This module is entirely synchronous to the rclk for simplified static timing 
-analysis. 
-*/
 module rptr_empty #(parameter ADDRSIZE = 4) 
 					(fifo1Inter rptr_empty_mod); 
 					
@@ -160,21 +94,6 @@ module rptr_empty #(parameter ADDRSIZE = 4)
 					
 endmodule: rptr_empty
 
-/*
-File: wptr_full.sv - Write pointer & full generation logic 
-	This module is completely synchronous to the read-clock doamin and contains the FIFO read pointer 
-and empty-flag logic. 
-
-	This module encloses all of the FIFO logic that is generated within the write clock domain 
-(except synchronizers). The write pointer is a dual n-bit Gray code counter. The n-bit pointer (wptr) 
-is passed to the read clock domain through the sync_w2r module. The (n-1) bit-pointer (waddr) is used
-to address the FIFO buffer. 
-
-The FIFO full output is registered and is asserted on the next rising wclk edge when the next modified
-wgnext value equals the synchronized and modified wrptr2 value (except MSBs). All module outputs are 
-registered for simplified synthesis using time budgeting. This module is entirely synchronous to the 
-wclk for simplified static timing analysis.  
-*/
 module wptr_full #(parameter ADDRSIZE = 4)
 				 (fifo1Inter wptr_full_mod); 
 				 
@@ -263,8 +182,9 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
 							output waddr, wptr, input wq2_rptr,
 							input winc, wclk, wrst_n); 
 
-
 endinterface: fifo1Inter
+
+`include "uvm_macros.svh"
 
 module fifo1 #(parameter DSIZE = 8, 
 			  parameter ASIZE = 4) 
@@ -277,7 +197,7 @@ module fifo1 #(parameter DSIZE = 8,
 		input wire logic rinc, rclk, rrst_n 
 	);
 	
-	
+	import uvm_pkg::*;
 	fifo1Inter fifo1Interface (.rdata(rdata), .wfull(wfull), .rempty(rempty), 
 							   .wdata(wdata), .wclken(winc), .winc(winc), .wclk(wclk), .wrst_n(wrst_n), 
 							   .rinc(rinc), .rclk(rclk), .rrst_n(rrst_n)); 
@@ -294,7 +214,14 @@ module fifo1 #(parameter DSIZE = 8,
 	//Read pointer & empty generation logic
 	rptr_empty rptr_empty(.rptr_empty_mod(fifo1Interface.rptr_empty_mod)); 
 	
-	//Write pointer & full generation logic 
+	//Wite pointer & full generation logic 
 	wptr_full wptr_full (.wptr_full_mod(fifo1Interface.wptr_full_mod)); 
+  
+  always_ff @(posedge wclk) begin 
+    `uvm_info("FIFO",
+              $sformatf("wdata = %d rdata = %d wfull = %d rempty = %d",
+                          wdata, rdata, wfull, rempty), UVM_MEDIUM)
+    
+  end 
 
 endmodule: fifo1 
