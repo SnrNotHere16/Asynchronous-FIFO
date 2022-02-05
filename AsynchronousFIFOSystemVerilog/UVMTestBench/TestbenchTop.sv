@@ -1,53 +1,41 @@
-interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
-
-  logic [DSIZE-1:0] rdata; 
-	logic wfull; 
-	logic rempty; 
-	logic [DSIZE-1:0] wdata; 
-	logic winc, wclk, wrst_n; 
-	logic rinc, rclk, rrst_n; 
-	
-endinterface: dut_if 
-
-`include "uvm_macros.svh"
-`include "my_testbench_pkg.svh"
-
-module TestBenchTop (); 
-
-
-	import uvm_pkg::*;
-	import my_testbench_pkg::*;
-	
-	dut_if _if(); 
-	fifo1 dut(
-		.rdata(_if.rdata), 
-		.wfull(_if.wfull), 
-	    .rempty(_if.rempty), 
-		.wdata(_if.wdata), 
-		.winc(_if.winc), .wclk(_if.wclk), .wrst_n(_if.wrst_n), 
-		.rinc(_if.rinc), .rclk(_if.rclk), .rrst_n(_if.rrst_n) 
-	);
-	
-	//clock generator 
-	initial begin 
-		_if.wclk = 0; 
-		_if.rclk = 0; 
-		fork 
-			forever #10ns _if.wclk = ~_if.wclk; 
-			forever #35ns _if.rclk = ~_if.rclk; 
-		join
-	end 
+class my_driver extends uvm_driver #(my_transaction); 
+	`uvm_component_utils(my_driver)
 	
 
-	initial begin 
-		 // Place the interface into the UVM configuration database
-		uvm_config_db#(virtual dut_if)::set(null, "*", "dut_vif", _if);
-		run_test("my_test"); 
-	end 
-	
-	initial begin 
-		$dumpfile("dump.vcd");
-      $dumpvars(0, TestBenchTop);
-	end 
+	virtual dut_if dut_vif;
+  
+  function new (string name, uvm_component parent); 
+	super.new(name, parent); 
+  endfunction: new
+  
+  function void build_phase(uvm_phase phase); 
+	//Get interface reference from config database 
+	if(!uvm_config_db#(virtual dut_if)::get(this, "", "dut_vif", dut_vif)) begin 
+		`uvm_error("", "uvm_config_db::get failed")
+	end
+  endfunction: build_phase
+  
+  task run_phase (uvm_phase phase); 
+	//First toggle reset 
+	 dut_vif.wrst_n = 0;
+     dut_vif.rrst_n = 0; 
+    repeat (2) @(posedge dut_vif.wclk);
+    #1;
+    dut_vif.wrst_n = 1;
+    dut_vif.rrst_n = 1;  
+	//Now drive normal traffc 
+		forever begin 
+			seq_item_port.get_next_item(req); 
+			
+			//Wiggle pins of DUT ;
+			dut_vif.wdata = req.wdata;
+          	dut_vif.winc = 0; 
+          	dut_vif.rinc = 0; 
+          @(posedge dut_vif.wclk)
+			
+			seq_item_port.item_done(); 
+		end 
+  
+  endtask: run_phase 
 
-endmodule: TestBenchTop
+endclass: my_driver 
