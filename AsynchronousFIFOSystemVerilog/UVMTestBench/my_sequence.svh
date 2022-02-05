@@ -1,11 +1,8 @@
 class my_transaction extends uvm_sequence_item; 
 	`uvm_object_utils(my_transaction) 
-	 rand logic [7:0] rdata; 
-	 rand logic wfull; 
-	 rand logic rempty; 
 	 rand logic [7:0] wdata; 
-	 rand logic winc, wclk, wrst_n; 
-	 rand logic rinc, rclk, rrst_n; 
+	 rand logic winc; 
+	 rand logic rinc; 
 	
 	function new (string name = "");
 		super.new(name); 
