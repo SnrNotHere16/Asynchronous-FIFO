@@ -43,6 +43,7 @@
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 # VSIM: Simulation has finished.
 Done
+
 */
 interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
 
@@ -78,6 +79,7 @@ module TestBenchTop ();
 	initial begin 
 		_if.wclk = 0; 
 		_if.rclk = 0; 
+		//fork
 		fork 
 			forever #10ns _if.wclk = ~_if.wclk; 
 			forever #35ns _if.rclk = ~_if.rclk; 
