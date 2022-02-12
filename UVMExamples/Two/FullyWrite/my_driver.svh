@@ -29,8 +29,8 @@ class my_driver extends uvm_driver #(my_transaction);
 			
 			//Wiggle pins of DUT ;
 			dut_vif.wdata = req.wdata;
-          	dut_vif.winc = 1; 
-          	dut_vif.rinc = 0; 
+          	dut_vif.winc = req.winc;
+          	dut_vif.rinc = req.rinc; 
           @(posedge dut_vif.wclk)
 			
 			seq_item_port.item_done(); 
