@@ -35,9 +35,13 @@ package  my_testbench_pkg;
 			phase.raise_objection(this); 
 			begin 
 				full_write_sequence wseq; 
-				wseq = full_write_sequence::type_id::create("seq");
+				wseq = full_write_sequence::type_id::create("wseq");
 				wseq.start(sequencer); 
-				
+				/*
+				read_sequence rseq; 
+				rseq = read_sequence::type_id::create("rseq"); 
+				rseq.start(sequencer); 
+				*/
 			end 
 			//We drop objection to allow the test to complete
 			phase.drop_objection(this); 
