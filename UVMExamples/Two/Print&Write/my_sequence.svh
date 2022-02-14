@@ -24,7 +24,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
 			req = my_transaction::type_id::create("req");
             start_item(req);
 
-           if (!req.randomize()) begin
+           if (!req.randomize() with {winc == 1; rinc == 0; wdata <= 255;}) begin
            `uvm_error("MY_SEQUENCE", "Randomize failed.");
            end
 		   
