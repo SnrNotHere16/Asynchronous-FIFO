@@ -25,11 +25,10 @@ class my_write extends uvm_sequence_item;
 	
 	constraint write_con {winc == 1'b1; wdata <= 255;}
 	constraint read_con {rinc == 1'b0;}
-
 endclass: my_write
 
 
-class my_sequence extends uvm_sequence #(my_write);
+class my_sequence extends uvm_sequence #(my_transaction);
 	`uvm_object_utils(my_sequence)
 	
 	function new (string name = ""); 
@@ -38,10 +37,10 @@ class my_sequence extends uvm_sequence #(my_write);
 
 	task body; 
 		repeat(8) begin
-			req = my_write::type_id::create("req");
+			req = my_transaction::type_id::create("req");
             start_item(req);
 
-           if (!req.randomize()) begin
+           if (!req.randomize() with {winc == 1; wdata <= 255; rinc == 1'b0;}) begin
            `uvm_error("MY_SEQUENCE", "Randomize failed.");
            end
 		   
