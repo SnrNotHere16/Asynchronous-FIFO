@@ -31,16 +31,6 @@ class my_driver extends uvm_driver #(my_transaction);
 			dut_vif.wdata = req.wdata;
 			dut_vif.winc = req.winc;
 			dut_vif.rinc = req.rinc; 
-			/*
-          if (count < 17) begin 
-          		dut_vif.winc = 1; 
-          		dut_vif.rinc = 0;
-            end 
-          	else begin 
-                dut_vif.winc = 0; 
-          		dut_vif.rinc = 1;
-            end
-				*/
           @(posedge dut_vif.wclk)
 			
 			seq_item_port.item_done(); 
