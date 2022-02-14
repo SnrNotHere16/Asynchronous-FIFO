@@ -47,6 +47,33 @@ class full_write_sequence extends uvm_sequence#(my_transaction);
 
 endclass: full_write_sequence
 
+class fullWrite_read_seq extends uvm_sequence #(my_transaction); 
+	`uvm_object_utils(fullWrite_read_seq) 
+	
+	function new (string name = ""); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		int count = 0; 
+		repeat (18) begin 
+			count++; 
+			req = my_transaction::type_id::create("req"); 
+			start_item(req); 
+			if (count < 17) begin 
+				assert(req.randomize with {winc == 1; rinc == 0; wdata <= 255;});
+			end 
+			
+			else begin 
+				assert (req.randomize with {winc == 0; rinc == 1; wdata <= 255;}); 
+			end 
+			finish_item(req); 
+		end 
+	endtask: body 
+
+
+endclass: fullWrite_read_seq
+
 class my_sequence extends uvm_sequence #(my_transaction);
 	`uvm_object_utils(my_sequence)
 	

@@ -1,48 +1,45 @@
 /*
 # KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test my_test...
-# KERNEL: UVM_WARNING /home/runner/my_testbench_pkg.svh(79) @ 10: uvm_test_top [] Hello World!
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 10: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1 winc = x rinc = x
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 30: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1 winc = x rinc = x
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 50: reporter [FIFO] wdata = 121 rdata =   x wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 70: reporter [FIFO] wdata = 230 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 90: reporter [FIFO] wdata = 192 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 110: reporter [FIFO] wdata =   7 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 130: reporter [FIFO] wdata = 187 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 150: reporter [FIFO] wdata = 220 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 170: reporter [FIFO] wdata = 106 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 190: reporter [FIFO] wdata = 101 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 210: reporter [FIFO] wdata = 205 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 230: reporter [FIFO] wdata = 162 rdata = 121 wfull = 0 rempty = 1 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 250: reporter [FIFO] wdata = 228 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 270: reporter [FIFO] wdata = 147 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 290: reporter [FIFO] wdata = 175 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 310: reporter [FIFO] wdata =  56 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 330: reporter [FIFO] wdata =  46 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 350: reporter [FIFO] wdata = 145 rdata = 121 wfull = 0 rempty = 0 winc = 1 rinc = 0
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 370: reporter [FIFO] wdata =  97 rdata = 121 wfull = 1 rempty = 0 winc = 0 rinc = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 390: reporter [FIFO] wdata = 158 rdata = 230 wfull = 1 rempty = 0 winc = 0 rinc = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 410: reporter [FIFO] wdata =  72 rdata = 230 wfull = 1 rempty = 0 winc = 0 rinc = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 430: reporter [FIFO] wdata =  95 rdata = 230 wfull = 1 rempty = 0 winc = 0 rinc = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 450: reporter [FIFO] wdata = 227 rdata = 230 wfull = 0 rempty = 0 winc = 0 rinc = 1
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 450: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 450: reporter [UVM/REPORT/SERVER] 
+# KERNEL: UVM_WARNING /home/runner/my_testbench_pkg.svh(84) @ 10: uvm_test_top [] Hello World!
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 10: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 30: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 50: reporter [FIFO] wdata = 188 rdata =   x wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 70: reporter [FIFO] wdata = 243 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 90: reporter [FIFO] wdata =  96 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 110: reporter [FIFO] wdata =   3 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 130: reporter [FIFO] wdata = 221 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 150: reporter [FIFO] wdata = 238 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 170: reporter [FIFO] wdata =  53 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 190: reporter [FIFO] wdata = 178 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 210: reporter [FIFO] wdata = 102 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 230: reporter [FIFO] wdata =  81 rdata = 188 wfull = 0 rempty = 1
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 250: reporter [FIFO] wdata = 114 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 270: reporter [FIFO] wdata = 201 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 290: reporter [FIFO] wdata =  87 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 310: reporter [FIFO] wdata =  28 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 330: reporter [FIFO] wdata =  23 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 350: reporter [FIFO] wdata =  72 rdata = 188 wfull = 0 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 370: reporter [FIFO] wdata = 176 rdata = 188 wfull = 1 rempty = 0
+# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 390: reporter [FIFO] wdata =  79 rdata = 243 wfull = 1 rempty = 0
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 390: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 390: reporter [UVM/REPORT/SERVER] 
 # KERNEL: --- UVM Report Summary ---
 # KERNEL: 
 # KERNEL: ** Report counts by severity
-# KERNEL: UVM_INFO :   26
+# KERNEL: UVM_INFO :   23
 # KERNEL: UVM_WARNING :    1
 # KERNEL: UVM_ERROR :    0
 # KERNEL: UVM_FATAL :    0
 # KERNEL: ** Report counts by id
 # KERNEL: []     1
-# KERNEL: [FIFO]    23
+# KERNEL: [FIFO]    20
 # KERNEL: [RNTST]     1
 # KERNEL: [TEST_DONE]     1
 # KERNEL: [UVM/RELNOTES]     1
 # KERNEL: 
 # RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
-# KERNEL: Time: 450 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#42_3@.
-# KERNEL: stopped at time: 450 ns
+# KERNEL: Time: 390 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#79_3@.
+# KERNEL: stopped at time: 390 ns
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 # VSIM: Simulation has finished.
 Done
