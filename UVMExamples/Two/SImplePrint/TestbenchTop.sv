@@ -37,7 +37,7 @@
 */
 interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
 
-  logic [DSIZE-1:0] rdata; 
+    logic [DSIZE-1:0] rdata; 
 	logic wfull; 
 	logic rempty; 
 	logic [DSIZE-1:0] wdata; 
