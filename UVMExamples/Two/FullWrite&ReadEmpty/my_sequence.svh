@@ -21,7 +21,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
 
 	task body; 
 		int count = 0; 
-		repeat(38) begin
+		repeat(44) begin
 		count++; 
 			req = my_transaction::type_id::create("req");
             start_item(req);
@@ -32,7 +32,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
 		 end 
 		 
 		 else begin 
-			if (!req.randomize() with {winc == 1; rinc == 0; wdata <= 255;}) begin 
+			if (!req.randomize() with {winc == 0; rinc == 1; wdata <= 255;}) begin 
 				`uvm_error("MY_SEQUENCE", "Randomize failed")
 			end 
 		 end 
