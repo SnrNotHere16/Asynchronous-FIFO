@@ -21,7 +21,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
 
 	task body; 
 		int count = 0; 
-		repeat(44) begin
+      repeat(71) begin
 		count++; 
 			req = my_transaction::type_id::create("req");
             start_item(req);
