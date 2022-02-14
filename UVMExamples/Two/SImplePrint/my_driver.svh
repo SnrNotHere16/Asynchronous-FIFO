@@ -1,4 +1,4 @@
-class my_driver extends uvm_driver #(my_transaction); 
+class my_driver extends uvm_driver #(my_write); 
 	`uvm_component_utils(my_driver)
 	
 

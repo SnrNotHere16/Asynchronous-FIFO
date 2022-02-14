@@ -11,7 +11,7 @@ package  my_testbench_pkg;
 		`uvm_component_utils(my_agent)
 		my_driver driver; 
 		uvm_sequencer#
-		(my_transaction) sequencer;
+		(my_write) sequencer;
 		
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
@@ -20,7 +20,7 @@ package  my_testbench_pkg;
 		function void build_phase(uvm_phase phase); 
 			driver = my_driver::type_id::create("driver", this); 
 			sequencer =
-        uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
+        uvm_sequencer#(my_write)::type_id::create("sequencer", this);
 		endfunction: build_phase 
 		
 		//In UVM connect phase, we connect the sequencer to the driver. 
