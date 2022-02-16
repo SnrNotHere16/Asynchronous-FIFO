@@ -43,6 +43,7 @@
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 # VSIM: Simulation has finished.
 Done
+//
 */
 interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
 
