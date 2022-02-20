@@ -31,3 +31,21 @@ class my_sequence extends uvm_sequence #(my_transaction);
 	endtask: body 
 endclass: my_sequence
 
+class my_seq2 extends uvm_sequence #(my_transaction); 
+	`uvm_object_utils(my_seq2) 
+	
+	function new (string name = ""); 
+		super.new(); 
+	endfunction: new 
+
+	task body; 
+		req = my_transaction::type_id::create("req"); 
+		start_item(req); 
+			assert (req.randomize()); 
+		
+		finish_item(req); 
+	
+	
+	endtask: body
+
+endclass: my_seq2
