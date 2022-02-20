@@ -31,7 +31,7 @@ class my_sequence extends uvm_sequence #(my_transaction);
 	endtask: body 
 endclass: my_sequence
 
-class my_seq2 extends uvm_sequence #(my_transaction); 
+class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
 	
 	function new (string name = ""); 
@@ -48,7 +48,7 @@ class my_seq2 extends uvm_sequence #(my_transaction);
 	
 	endtask: body
 
-endclass: my_seq2
+endclass: full_write_seq
 
 class my_seq3 extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq3) 
