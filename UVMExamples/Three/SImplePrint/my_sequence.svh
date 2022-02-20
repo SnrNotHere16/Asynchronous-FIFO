@@ -45,6 +45,7 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 		finish_item(req); 
 	endtask: body 
 endclass: single_write_seq
+
 class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
 	
