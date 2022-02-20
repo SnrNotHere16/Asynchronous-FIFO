@@ -31,6 +31,22 @@ class my_sequence extends uvm_sequence #(my_transaction);
 	endtask: body 
 endclass: my_sequence
 
+class single_write_seq extends uvm_sequence#(my_transaction); 
+	`uvm_object_utils(single_write_seq) 
+	
+	function new(string name = ""); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req");
+		start_item(req); 
+		assert(req.randomize()); 
+		finish_item(req); 
+	
+	endtask: body 
+
+endclass: single_write_seq
 class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
 	
@@ -50,7 +66,7 @@ class full_write_seq extends uvm_sequence #(my_transaction);
 
 endclass: full_write_seq
 
-class my_seq3 extends uvm_sequence #(my_transaction); 
+class empty_read_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq3) 
 	
 	function new (string name = ""); 
@@ -66,4 +82,4 @@ class my_seq3 extends uvm_sequence #(my_transaction);
 	endtask: body 
 
 
-endclass: my_seq3
+endclass: empty_read_seq
