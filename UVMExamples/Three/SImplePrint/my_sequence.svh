@@ -34,7 +34,7 @@ endclass: my_sequence
 class single_write_seq extends uvm_sequence#(my_transaction); 
 	`uvm_object_utils(single_write_seq) 
 	
-	function new(string name = ""); 
+	function new(string name = "sinlge_write_seq"); 
 		super.new(name); 
 	endfunction: new 
 	
@@ -43,9 +43,7 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 		start_item(req); 
 		assert(req.randomize()); 
 		finish_item(req); 
-	
 	endtask: body 
-
 endclass: single_write_seq
 class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
