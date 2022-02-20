@@ -49,7 +49,7 @@ endclass: single_write_seq
 class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
 	
-	function new (string name = ""); 
+	function new (string name = "full_write_seq"); 
 		super.new(name); 
 	endfunction: new 
 
