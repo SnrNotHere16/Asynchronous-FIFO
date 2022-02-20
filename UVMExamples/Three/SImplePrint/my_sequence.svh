@@ -35,7 +35,7 @@ class my_seq2 extends uvm_sequence #(my_transaction);
 	`uvm_object_utils(my_seq2) 
 	
 	function new (string name = ""); 
-		super.new(); 
+		super.new(name); 
 	endfunction: new 
 
 	task body; 
@@ -49,3 +49,21 @@ class my_seq2 extends uvm_sequence #(my_transaction);
 	endtask: body
 
 endclass: my_seq2
+
+class my_seq3 extends uvm_sequence #(my_transaction); 
+	`uvm_object_utils(my_seq3) 
+	
+	function new (string name = ""); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req"); 
+		start_item(req); 
+		
+		finish_item(req);
+	
+	endtask: body 
+
+
+endclass: my_seq3
