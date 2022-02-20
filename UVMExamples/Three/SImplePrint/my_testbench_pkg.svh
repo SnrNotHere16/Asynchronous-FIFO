@@ -37,6 +37,7 @@ package  my_testbench_pkg;
 				my_sequence seq; 
 				seq = my_sequence::type_id::create("seq");
 				seq.start(sequencer); 
+				//start other sequence here
 			end 
 			//We drop objection to allow the test to complete
 			phase.drop_objection(this); 
