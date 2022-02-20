@@ -68,7 +68,7 @@ endclass: full_write_seq
 class empty_read_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq3) 
 	
-	function new (string name = ""); 
+	function new (string name = "empty_read_seq"); 
 		super.new(name); 
 	endfunction: new 
 	
@@ -79,6 +79,5 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 		finish_item(req);
 	
 	endtask: body 
-
-
+	
 endclass: empty_read_seq
