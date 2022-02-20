@@ -60,7 +60,7 @@ class my_seq3 extends uvm_sequence #(my_transaction);
 	task body; 
 		req = my_transaction::type_id::create("req"); 
 		start_item(req); 
-		
+		assert (req.randomize()); 
 		finish_item(req);
 	
 	endtask: body 
