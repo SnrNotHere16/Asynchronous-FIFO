@@ -18,6 +18,7 @@ package  my_testbench_pkg;
 		
 		function void build_phase(uvm_phase phase); 
 			driver = my_driver::type_id::create("driver", this); 
+			monitor = my_monitor::type_id::create("monitor", this); 
 			sequencer =
         uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
 		endfunction: build_phase 
