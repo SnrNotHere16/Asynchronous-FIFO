@@ -9,8 +9,8 @@ class my_transaction extends uvm_sequence_item;
 	endfunction: new 
 endclass: my_transaction 
 
-
-class my_sequence extends uvm_sequence #(my_transaction);
+//Sequence to do nothing, remain idle, no write, no read
+class idle extends uvm_sequence #(my_transaction);
 	`uvm_object_utils(my_sequence)
 	
 	function new (string name = ""); 
@@ -29,8 +29,9 @@ class my_sequence extends uvm_sequence #(my_transaction);
 		    finish_item(req);
 	end 
 	endtask: body 
-endclass: my_sequence
+endclass: idle
 
+//Sequence to perform a single write on the FIFO
 class single_write_seq extends uvm_sequence#(my_transaction); 
 	`uvm_object_utils(single_write_seq) 
 	
