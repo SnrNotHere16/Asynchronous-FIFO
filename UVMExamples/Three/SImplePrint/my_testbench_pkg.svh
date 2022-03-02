@@ -1,7 +1,6 @@
 package  my_testbench_pkg;
 	import uvm_pkg::*; 
 	
-	
   `include "my_sequence.svh"
   `include "my_driver.svh"
 
@@ -27,8 +26,6 @@ package  my_testbench_pkg;
 		endfunction: connect_phase
 		
 	endclass: my_agent
-
-
 
 	class my_env extends uvm_env; 
 		`uvm_component_utils(my_env)
@@ -72,6 +69,5 @@ package  my_testbench_pkg;
 			phase.drop_objection(this); 
 		endtask: run_phase
 	endclass: my_test 
-
 
 endpackage: my_testbench_pkg
