@@ -30,20 +30,6 @@ package  my_testbench_pkg;
 
 		endfunction: connect_phase
 		
-		task run_phase (uvm_phase phase); 
-			//single_write_seq seq; 
-			//seq = single_write_seq::type_id::create("seq");
-			
-			//we raise the objection to keep the test from completing 
-			//phase.raise_objection(this); 
-			//begin 
-			//	seq.start(sequencer); 
-				//start other sequence here
-			//end 
-			//We drop objection to allow the test to complete
-			//phase.drop_objection(this); 
-		
-		endtask: run_phase 
 	
 	endclass: my_agent
 
