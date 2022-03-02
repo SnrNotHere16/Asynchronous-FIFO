@@ -59,12 +59,11 @@ class full_write_seq extends uvm_sequence #(my_transaction);
 
 	task body; 
 		req = my_transaction::type_id::create("req"); 
-		start_item(req); 
-			assert (req.randomize()); 
-		
-		finish_item(req); 
-	
-	
+		repeat (17) begin 
+			start_item(req); 
+			assert (req.randomize() with {}); 
+			finish_item(req); 
+		end 
 	endtask: body
 
 endclass: full_write_seq
