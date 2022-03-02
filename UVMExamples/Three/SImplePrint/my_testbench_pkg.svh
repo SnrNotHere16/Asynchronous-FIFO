@@ -31,11 +31,11 @@ package  my_testbench_pkg;
 		endfunction: connect_phase
 		
 		task run_phase (uvm_phase phase); 
+			single_write_seq seq; 
+			seq = single_write_seq::type_id::create("seq");
 			//we raise the objection to keep the test from completing 
 			phase.raise_objection(this); 
 			begin 
-				single_write_seq seq; 
-				seq = single_write_seq::type_id::create("seq");
 				seq.start(sequencer); 
 				//start other sequence here
 			end 
