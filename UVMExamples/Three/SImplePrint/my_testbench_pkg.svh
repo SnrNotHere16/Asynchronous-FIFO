@@ -34,8 +34,8 @@ package  my_testbench_pkg;
 			//we raise the objection to keep the test from completing 
 			phase.raise_objection(this); 
 			begin 
-				my_sequence seq; 
-				seq = my_sequence::type_id::create("seq");
+				single_write_seq seq; 
+				seq = single_write_seq::type_id::create("seq");
 				seq.start(sequencer); 
 				//start other sequence here
 			end 
