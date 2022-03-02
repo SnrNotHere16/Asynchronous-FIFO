@@ -41,9 +41,11 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 	
 	task body; 
 		req = my_transaction::type_id::create("req");
-		start_item(req); 
-		assert(req.randomize()); 
-		finish_item(req); 
+		repeat (1) begin 
+			start_item(req); 
+			assert(req.randomize() with {rinc == 0; winc == 1; wdata <= 255;}); 
+			finish_item(req);
+		end 
 	endtask: body 
 endclass: single_write_seq
 
