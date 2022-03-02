@@ -49,6 +49,7 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 	endtask: body 
 endclass: single_write_seq
 
+//Seqence to perfom full write on the FIFO 
 class full_write_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq2) 
 	
@@ -68,6 +69,7 @@ class full_write_seq extends uvm_sequence #(my_transaction);
 
 endclass: full_write_seq
 
+//Sequence to perform a empty read on the FIFO
 class empty_read_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(my_seq3) 
 	
@@ -78,7 +80,7 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 	task body; 
 		req = my_transaction::type_id::create("req"); 
 		start_item(req); 
-		assert (req.randomize()); 
+		assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;); 
 		finish_item(req);
 	
 	endtask: body 
