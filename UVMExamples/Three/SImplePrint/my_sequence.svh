@@ -12,7 +12,7 @@ endclass: my_transaction
 
 //Sequence to do nothing, remain idle, no write, no read
 class idle extends uvm_sequence #(my_transaction);
-	`uvm_object_utils(my_sequence)
+  	`uvm_object_utils(idle)
 	
 	function new (string name = ""); 
 		super.new(name); 
@@ -52,7 +52,7 @@ endclass: single_write_seq
 
 //Seqence to perfom full write on the FIFO 
 class full_write_seq extends uvm_sequence #(my_transaction); 
-	`uvm_object_utils(my_seq2) 
+	`uvm_object_utils(full_write_seq) 
 	
 	function new (string name = "full_write_seq"); 
 		super.new(name); 
@@ -71,7 +71,7 @@ endclass: full_write_seq
 
 //Sequence to perform a empty read on the FIFO
 class empty_read_seq extends uvm_sequence #(my_transaction); 
-	`uvm_object_utils(my_seq3) 
+	`uvm_object_utils(empty_read_seq) 
 	
 	function new (string name = "empty_read_seq"); 
 		super.new(name); 
@@ -81,7 +81,7 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (71) begin 
 			start_item(req); 
-			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;); 
+			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;}); 
 			finish_item(req);
 		end 
 	endtask: body 
