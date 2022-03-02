@@ -61,7 +61,7 @@ class full_write_seq extends uvm_sequence #(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (17) begin 
 			start_item(req); 
-			assert (req.randomize() with {}); 
+			assert (req.randomize() with {rinc == 0; winc == 1; wdata <= 255;}); 
 			finish_item(req); 
 		end 
 	endtask: body
@@ -78,9 +78,11 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 	
 	task body; 
 		req = my_transaction::type_id::create("req"); 
-		start_item(req); 
-		assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;); 
-		finish_item(req);
+		repeat (71) begin 
+			start_item(req); 
+			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;); 
+			finish_item(req);
+		end 
 	
 	endtask: body 
 	
