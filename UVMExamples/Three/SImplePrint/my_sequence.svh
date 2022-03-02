@@ -22,8 +22,8 @@ class idle extends uvm_sequence #(my_transaction);
 			req = my_transaction::type_id::create("req");
             start_item(req);
 
-           if (!req.randomize()) begin
-           `uvm_error("MY_SEQUENCE", "Randomize failed.");
+           if (!req.randomize() with {rinc == 0; winc == 0; wdata <= 255;}) begin
+           `uvm_error("Idle", "Randomize failed.");
            end
 		   
 		    finish_item(req);
