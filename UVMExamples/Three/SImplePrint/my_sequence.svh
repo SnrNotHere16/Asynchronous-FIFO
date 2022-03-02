@@ -11,26 +11,26 @@ class my_transaction extends uvm_sequence_item;
 endclass: my_transaction 
 
 //Sequence to do nothing, remain idle, no write, no read
-class idle extends uvm_sequence #(my_transaction);
-  	`uvm_object_utils(idle)
+class idle_seq extends uvm_sequence #(my_transaction);
+  	`uvm_object_utils(idle_seq)
 	
 	function new (string name = ""); 
 		super.new(name); 
 	endfunction: new 
 
 	task body; 
-		repeat(8) begin
+		repeat(10) begin
 			req = my_transaction::type_id::create("req");
             start_item(req);
 
-           if (!req.randomize() with {rinc == 0; winc == 0; wdata <= 255;}) begin
+           if (!req.randomize() with {rinc == 0; winc == 0; wdata == 0;}) begin
            `uvm_error("Idle", "Randomize failed.");
            end
 		   
 		    finish_item(req);
 	end 
 	endtask: body 
-endclass: idle
+endclass: idle_seq
 
 //Sequence to perform a single write on the FIFO
 class single_write_seq extends uvm_sequence#(my_transaction); 
@@ -42,7 +42,7 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 	
 	task body; 
 		req = my_transaction::type_id::create("req");
-      repeat (11) begin 
+      repeat (1) begin 
 			start_item(req); 
 			assert(req.randomize() with {rinc == 0; winc == 1;wdata <= 255;}); 
 			finish_item(req);

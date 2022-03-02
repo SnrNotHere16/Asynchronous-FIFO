@@ -5,8 +5,6 @@ package  my_testbench_pkg;
   `include "my_sequence.svh"
   `include "my_driver.svh"
 
-	
-	
 	class my_agent extends uvm_agent; 
 		`uvm_component_utils(my_agent)
 		my_driver driver; 
@@ -26,11 +24,8 @@ package  my_testbench_pkg;
 		//In UVM connect phase, we connect the sequencer to the driver. 
       function void connect_phase (uvm_phase phase); 
 			driver.seq_item_port.connect(sequencer.seq_item_export);
-        	//      driver.seq_item_port.connect(sequencer.seq_item_export);
-
 		endfunction: connect_phase
 		
-	
 	endclass: my_agent
 
 
@@ -61,12 +56,18 @@ package  my_testbench_pkg;
 		endfunction: build_phase 
 		
 		task run_phase(uvm_phase phase); 
-			single_write_seq seq; 
-			seq = single_write_seq::type_id::create("seq");
+			//for some reason the order here matters 
+			//the handles should be initialized first
+			//then call onto the factory 
+          	single_write_seq seq0; 
+			idle_seq seq1;
+          	seq0 = single_write_seq::type_id::create("seq0");
+			seq1 = idle_seq::type_id::create("seq1"); 
+			
 			//We raise objection to keep the test from completing 
 			phase.raise_objection(this); 
-			//`uvm_warning("", "Hello World!")
-			seq.start(env.agent.sequencer); 
+			seq0.start(env.agent.sequencer); 
+			seq1.start(env.agent.sequencer);
 			//We drop objection to allow the test to complete 
 			phase.drop_objection(this); 
 		endtask: run_phase
