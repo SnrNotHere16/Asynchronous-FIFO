@@ -184,7 +184,7 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
 
 endinterface: fifo1Inter
 
-//`include "uvm_macros.svh"
+`include "uvm_macros.svh"
 
 module fifo1 #(parameter DSIZE = 8, 
 			  parameter ASIZE = 4) 

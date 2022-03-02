@@ -31,16 +31,17 @@ package  my_testbench_pkg;
 		endfunction: connect_phase
 		
 		task run_phase (uvm_phase phase); 
-			single_write_seq seq; 
-			seq = single_write_seq::type_id::create("seq");
+			//single_write_seq seq; 
+			//seq = single_write_seq::type_id::create("seq");
+			
 			//we raise the objection to keep the test from completing 
-			phase.raise_objection(this); 
-			begin 
-				seq.start(sequencer); 
+			//phase.raise_objection(this); 
+			//begin 
+			//	seq.start(sequencer); 
 				//start other sequence here
-			end 
+			//end 
 			//We drop objection to allow the test to complete
-			phase.drop_objection(this); 
+			//phase.drop_objection(this); 
 		
 		endtask: run_phase 
 	
@@ -74,10 +75,12 @@ package  my_testbench_pkg;
 		endfunction: build_phase 
 		
 		task run_phase(uvm_phase phase); 
+			single_write_seq seq; 
+			seq = single_write_seq::type_id::create("seq");
 			//We raise objection to keep the test from completing 
 			phase.raise_objection(this); 
-			#10; 
-			`uvm_warning("", "Hello World!")
+			//`uvm_warning("", "Hello World!")
+			seq.start(env.agent.sequencer); 
 			//We drop objection to allow the test to complete 
 			phase.drop_objection(this); 
 		endtask: run_phase
