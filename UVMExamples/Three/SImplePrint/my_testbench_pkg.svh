@@ -21,7 +21,7 @@ package  my_testbench_pkg;
 		endfunction: build_phase 
 		
 		//In UVM connect phase, we connect the sequencer to the driver. 
-      function void connect_phase (uvm_phase phase); 
+		function void connect_phase (uvm_phase phase); 
 			driver.seq_item_port.connect(sequencer.seq_item_export);
 		endfunction: connect_phase
 		
