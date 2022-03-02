@@ -3,6 +3,7 @@ class my_transaction extends uvm_sequence_item;
 	 rand logic [7:0] wdata; 
 	 rand logic winc; 
 	 rand logic rinc; 
+	 
 	
 	function new (string name = "");
 		super.new(name); 
