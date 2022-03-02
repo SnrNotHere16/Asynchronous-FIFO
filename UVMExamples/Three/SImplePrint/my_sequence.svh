@@ -1,12 +1,12 @@
-class my_transaction  extends uvm_sequence_item; 
+class my_transaction  extends uvm_sequence_item 
 	`uvm_object_utils(my_transaction) 
 	parameter DSIZE = 8;
 	//inputs 
-  rand logic [DSIZE-1:0] wdata; 
+		rand logic [DSIZE-1:0] wdata; 
 		rand logic winc; 
 		rand logic rinc; 
 	//outputs 
-  logic [DSIZE-1:0] rdata; 
+		logic [DSIZE-1:0] rdata; 
 		logic wfull; 
 		logic rempty; 
 		logic wclk, wrst_n; 
