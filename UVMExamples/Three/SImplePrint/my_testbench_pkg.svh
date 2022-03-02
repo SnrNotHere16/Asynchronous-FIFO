@@ -3,10 +3,12 @@ package  my_testbench_pkg;
 	
   `include "my_sequence.svh"
   `include "my_driver.svh"
+  `include "my_monitor.svh" 
 
 	class my_agent extends uvm_agent; 
 		`uvm_component_utils(my_agent)
 		my_driver driver; 
+		my_monitor monitor; 
 		uvm_sequencer#
 		(my_transaction) sequencer;
 		
