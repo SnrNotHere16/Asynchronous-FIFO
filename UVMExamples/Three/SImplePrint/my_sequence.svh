@@ -83,7 +83,6 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;); 
 			finish_item(req);
 		end 
-	
 	endtask: body 
 	
 endclass: empty_read_seq
