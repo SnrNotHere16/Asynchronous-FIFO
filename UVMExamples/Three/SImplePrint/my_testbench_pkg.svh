@@ -4,6 +4,7 @@ package  my_testbench_pkg;
   `include "my_sequence.svh"
   `include "my_driver.svh"
   `include "my_monitor.svh" 
+  `include "my_scoreboard.svh"
 
 	class my_agent extends uvm_agent; 
 		`uvm_component_utils(my_agent)
