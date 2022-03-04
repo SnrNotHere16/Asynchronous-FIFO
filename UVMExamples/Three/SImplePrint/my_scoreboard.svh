@@ -7,6 +7,7 @@ class my_scoreboard extends uvm_scoreboard;
 	endfunction: new 
 	
 	function void build_phase(uvm_phase phase); 
+		super.build_phase(phase); 
 		m_analysis_imp = new ("m_analysis_imp", this); 
 	endfunction: build_phase
 
