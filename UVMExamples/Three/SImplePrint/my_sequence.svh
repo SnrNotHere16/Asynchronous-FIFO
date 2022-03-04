@@ -25,6 +25,10 @@ class my_transaction  extends uvm_sequence_item;
 		return s; 
 	endfunction: convert2string
 	
+	function void do_print (uvm_printer printer); 
+		$display(convert2string()); 
+	endfunction: do_print 
+	
 endclass: my_transaction 
 
 //Sequence to do nothing, remain idle, no write, no read
