@@ -15,6 +15,16 @@ class my_transaction  extends uvm_sequence_item;
 	function new (string name = "");
 		super.new(name); 
 	endfunction: new 
+	
+	function string convert2string(); 
+		string s; 
+		s = super.convert2string(); 
+		$sformat(s, "%s\n winc \t%0d\n rinc \t%0d\n wdata \t%0d\n rdata \t%0d\n wfull \t%0d\n rfull \t%0d\n", 
+				 s, winc, rinc, wdata, rdata, wfull, rempty); 
+		$sformat (s, "%s wclk \t%0b\n rclk \t%0b\n wrst_n \t%0b\n rrst_n \t%0b\n", s, wclk, rclk, wrst_n, rrst_n); 
+		return s; 
+	endfunction: convert2string
+	
 endclass: my_transaction 
 
 //Sequence to do nothing, remain idle, no write, no read
