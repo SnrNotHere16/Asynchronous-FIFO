@@ -49,8 +49,9 @@ class idle_seq extends uvm_sequence #(my_transaction);
            end
 		   
 		    finish_item(req);
-	end 
+		end 
 	endtask: body 
+	
 endclass: idle_seq
 
 //Sequence to perform a single write on the FIFO
@@ -69,7 +70,26 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 			finish_item(req);
 		end 
 	endtask: body 
+	
 endclass: single_write_seq
+
+class single_read_seq extends uvm_sequence#(my_transaction); 
+	`uvm_object_utils(single_read_seq) 
+	
+	function new (string name = "single_read_seq"); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req"); 
+		repeat (1)begin 
+			start_item(req); 
+			assert(req.randomize() with {rinc == 1; winc == 0; wdata <= 0;});
+			finish_item(req); 
+		end 
+	endtask: body 
+
+endclass: single_read_seq
 
 //Seqence to perfom full write on the FIFO 
 class full_write_seq extends uvm_sequence #(my_transaction); 
