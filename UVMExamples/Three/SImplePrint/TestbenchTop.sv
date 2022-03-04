@@ -1,39 +1,189 @@
 /*
+Tested for wclk 10ns, rclk 35ns 
+Simple write (one write), remain idle for 10 cycles (wclk) 
+/*******************EDA playground settings************************
+Ran on EDA Playground: Tools&Simulators: Aldec Riviera Pro 2020.04
+					   Run options: +access+r 
+*******************************************************************
+output 
 # KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test my_test...
-# KERNEL: UVM_WARNING /home/runner/my_testbench_pkg.svh(79) @ 10: uvm_test_top [] Hello World!
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 10: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 30: reporter [FIFO] wdata =   x rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 50: reporter [FIFO] wdata = 230 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 70: reporter [FIFO] wdata = 247 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 90: reporter [FIFO] wdata =  25 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 110: reporter [FIFO] wdata =  76 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 130: reporter [FIFO] wdata = 144 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 150: reporter [FIFO] wdata = 229 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 170: reporter [FIFO] wdata =  75 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/runner/design.sv(223) @ 190: reporter [FIFO] wdata = 194 rdata =   x wfull = 0 rempty = 1
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 190: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 190: reporter [UVM/REPORT/SERVER] 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 10: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	x
+# KERNEL:  rinc 	x
+# KERNEL:  wdata 	x
+# KERNEL:  rdata 	x
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	0
+# KERNEL:  rrst_n 	0
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 30: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	x
+# KERNEL:  rinc 	x
+# KERNEL:  wdata 	x
+# KERNEL:  rdata 	x
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	0
+# KERNEL:  rrst_n 	0
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 50: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	1
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	63
+# KERNEL:  rdata 	x
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	1
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 70: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 90: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 110: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	1
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 130: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	1
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 150: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 170: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 190: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	1
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 210: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 230: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	1
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 250: uvm_test_top.env.scoreboard [Monitor:Write] 
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	63
+# KERNEL:  wfull 	0
+# KERNEL:  rempty 	0
+# KERNEL:  wclk 	1
+# KERNEL:  rclk 	1
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
+# KERNEL: 
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 250: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 250: reporter [UVM/REPORT/SERVER] 
 # KERNEL: --- UVM Report Summary ---
 # KERNEL: 
 # KERNEL: ** Report counts by severity
-# KERNEL: UVM_INFO :   13
-# KERNEL: UVM_WARNING :    1
+# KERNEL: UVM_INFO :   16
+# KERNEL: UVM_WARNING :    0
 # KERNEL: UVM_ERROR :    0
 # KERNEL: UVM_FATAL :    0
 # KERNEL: ** Report counts by id
-# KERNEL: []     1
-# KERNEL: [FIFO]    10
+# KERNEL: [Monitor:Write]    13
 # KERNEL: [RNTST]     1
 # KERNEL: [TEST_DONE]     1
 # KERNEL: [UVM/RELNOTES]     1
 # KERNEL: 
 # RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
-# KERNEL: Time: 190 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#42_3@.
-# KERNEL: stopped at time: 190 ns
+# KERNEL: Time: 250 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#79_3@.
+# KERNEL: stopped at time: 250 ns
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 # VSIM: Simulation has finished.
-
-
+Done
 */
 interface dut_if  #(parameter DSIZE = 8, parameter ASIZE = 4) (); 
 
