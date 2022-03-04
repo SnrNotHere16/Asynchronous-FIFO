@@ -1,5 +1,5 @@
 class my_scoreboard extends uvm_scoreboard; 
-	`uvm_component(my_scoreboard) 
+	`uvm_component_utils(my_scoreboard) 
 	
 	function new (string name = "my_scoreboard", uvm_component parent); 
 		super.new(name, parent); 
