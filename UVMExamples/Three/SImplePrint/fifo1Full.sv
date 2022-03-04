@@ -184,7 +184,7 @@ interface fifo1Inter #(parameter DSIZE = 8, parameter ASIZE = 4)
 
 endinterface: fifo1Inter
 
-`include "uvm_macros.svh"
+//`include "uvm_macros.svh"
 
 module fifo1 #(parameter DSIZE = 8, 
 			  parameter ASIZE = 4) 
@@ -197,7 +197,7 @@ module fifo1 #(parameter DSIZE = 8,
 		input wire logic rinc, rclk, rrst_n 
 	);
 	
-	import uvm_pkg::*;
+	//import uvm_pkg::*;
 	fifo1Inter fifo1Interface (.rdata(rdata), .wfull(wfull), .rempty(rempty), 
 							   .wdata(wdata), .wclken(winc), .winc(winc), .wclk(wclk), .wrst_n(wrst_n), 
 							   .rinc(rinc), .rclk(rclk), .rrst_n(rrst_n)); 
@@ -217,11 +217,12 @@ module fifo1 #(parameter DSIZE = 8,
 	//Wite pointer & full generation logic 
 	wptr_full wptr_full (.wptr_full_mod(fifo1Interface.wptr_full_mod)); 
   
+  /*
   always_ff @(posedge wclk) begin 
     `uvm_info("FIFO",
               $sformatf("wdata = %d rdata = %d wfull = %d rempty = %d",
                           wdata, rdata, wfull, rempty), UVM_MEDIUM)
     
   end 
-
+	*/
 endmodule: fifo1 
