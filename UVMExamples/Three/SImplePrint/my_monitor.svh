@@ -30,7 +30,6 @@ class my_monitor extends uvm_monitor;
 				item.rclk = dut_vif.rclk; 
 				item.rrst_n = dut_vif.rrst_n; 
 			end 
-			`uvm_info("Monitor", $sformatf("Monitor transfer rempty:%d", item.rempty), UVM_LOW) 
 			//write 
 		end 
 	endtask: run_phase 
