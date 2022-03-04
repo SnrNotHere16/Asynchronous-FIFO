@@ -44,6 +44,11 @@ package  my_testbench_pkg;
 			agent = my_agent::type_id::create("agent", this); 
 			scoreboard = my_scoreboard::type_id::create("scoreboard", this); 
 		endfunction: build_phase
+		
+		function void connect_phase (uvm_phase phase); 
+			super.connect_phase(phase); 
+			agent.monitor.m_analysis_port.connect(scoreboard.m_analysis_imp);
+		endfunction: connect_phase 
 	endclass: my_env
 
 	class my_test extends uvm_test; 
