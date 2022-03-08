@@ -20,22 +20,22 @@ output
 # KERNEL:  rrst_n 	0
 # KERNEL: 
 # KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 30: uvm_test_top.env.scoreboard [Monitor:Write] 
-# KERNEL:  winc 	0
+# KERNEL:  winc 	1
 # KERNEL:  rinc 	0
-# KERNEL:  wdata 	0
+# KERNEL:  wdata 	4
 # KERNEL:  rdata 	x
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
 # KERNEL:  rclk 	0
-# KERNEL:  wrst_n 	0
-# KERNEL:  rrst_n 	0
+# KERNEL:  wrst_n 	1
+# KERNEL:  rrst_n 	1
 # KERNEL: 
 # KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 50: uvm_test_top.env.scoreboard [Monitor:Write] 
-# KERNEL:  winc 	1
+# KERNEL:  winc 	0
 # KERNEL:  rinc 	0
-# KERNEL:  wdata 	4
-# KERNEL:  rdata 	x
+# KERNEL:  wdata 	0
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -121,7 +121,7 @@ output
 # KERNEL:  wdata 	0
 # KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
-# KERNEL:  rempty 	1
+# KERNEL:  rempty 	0
 # KERNEL:  wclk 	1
 # KERNEL:  rclk 	1
 # KERNEL:  wrst_n 	1
@@ -133,7 +133,7 @@ output
 # KERNEL:  wdata 	0
 # KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
-# KERNEL:  rempty 	1
+# KERNEL:  rempty 	0
 # KERNEL:  wclk 	1
 # KERNEL:  rclk 	0
 # KERNEL:  wrst_n 	1
@@ -145,42 +145,30 @@ output
 # KERNEL:  wdata 	0
 # KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
-# KERNEL:  rempty 	1
+# KERNEL:  rempty 	0
 # KERNEL:  wclk 	1
 # KERNEL:  rclk 	0
 # KERNEL:  wrst_n 	1
 # KERNEL:  rrst_n 	1
 # KERNEL: 
-# KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 250: uvm_test_top.env.scoreboard [Monitor:Write] 
-# KERNEL:  winc 	0
-# KERNEL:  rinc 	0
-# KERNEL:  wdata 	0
-# KERNEL:  rdata 	4
-# KERNEL:  wfull 	0
-# KERNEL:  rempty 	0
-# KERNEL:  wclk 	1
-# KERNEL:  rclk 	1
-# KERNEL:  wrst_n 	1
-# KERNEL:  rrst_n 	1
-# KERNEL: 
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 250: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 250: reporter [UVM/REPORT/SERVER] 
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_objection.svh(1271) @ 230: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# KERNEL: UVM_INFO /home/build/vlib1/vlib/uvm-1.2/src/base/uvm_report_server.svh(869) @ 230: reporter [UVM/REPORT/SERVER] 
 # KERNEL: --- UVM Report Summary ---
 # KERNEL: 
 # KERNEL: ** Report counts by severity
-# KERNEL: UVM_INFO :   16
+# KERNEL: UVM_INFO :   15
 # KERNEL: UVM_WARNING :    0
 # KERNEL: UVM_ERROR :    0
 # KERNEL: UVM_FATAL :    0
 # KERNEL: ** Report counts by id
-# KERNEL: [Monitor:Write]    13
+# KERNEL: [Monitor:Write]    12
 # KERNEL: [RNTST]     1
 # KERNEL: [TEST_DONE]     1
 # KERNEL: [UVM/RELNOTES]     1
 # KERNEL: 
 # RUNTIME: Info: RUNTIME_0068 uvm_root.svh (521): $finish called.
-# KERNEL: Time: 250 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#79_3@.
-# KERNEL: stopped at time: 250 ns
+# KERNEL: Time: 230 ns,  Iteration: 62,  Instance: /TestBenchTop,  Process: @INITIAL#79_3@.
+# KERNEL: stopped at time: 230 ns
 # VSIM: Simulation has finished. There are no more test vectors to simulate.
 # VSIM: Simulation has finished.
 Done
