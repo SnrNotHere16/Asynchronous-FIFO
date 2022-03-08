@@ -11,6 +11,8 @@ class my_scoreboard extends uvm_scoreboard;
 		wrst_n_cp: coverpoint i.wrst_n;
 		wfull_cp: coverpoint i.wfull; 
 		rempty: coverpoint i.rempty;
+		wr_incX: cross i.winc, i.rinc; 
+		reset_X: cross i.rrst_n, i.wrst_n;
 	endgroup: my_transaction_c
 	
 	function new (string name = "my_scoreboard", uvm_component parent);  
