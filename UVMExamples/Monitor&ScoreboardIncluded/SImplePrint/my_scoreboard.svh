@@ -21,9 +21,9 @@ class my_scoreboard extends uvm_scoreboard;
 	
 
 	function write (my_transaction item); 
-			i = item; 
-			my_transaction_c.sample(); 
-			`uvm_info("Monitor:Write", item.convert2string(), UVM_LOW)
+		i = item; 
+		my_transaction_c.sample(); 
+		`uvm_info("Monitor:Write", item.convert2string(), UVM_LOW)
 	endfunction: write 
 	
 endclass: my_scoreboard
