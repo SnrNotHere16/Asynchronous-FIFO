@@ -40,12 +40,10 @@ class reset_seq extends uvm_sequence #(my_transaction);
 	endfunction: new 
 	
 	task body; 
-		repeat(2) begin 
 			req = my_transaction::type_id::create("req"); 
 			start_item(req); 
 			assert(req.randomize() with {rinc == 0; winc == 0; wdata == 0; rrst_n == 0; wrst_n == 0;});
 			finish_item(req); 
-		end 
 	endtask: body 
 
 endclass: reset_seq  
