@@ -129,6 +129,7 @@ class single_read_seq extends uvm_sequence#(my_transaction);
 
 endclass: single_read_seq
 
+//Sequence to perform mutiple reads on the FIFO
 class multi_read_seq extends uvm_sequence#(my_transaction); 
 	`uvm_object_utils(multi_read_seq) 
 	integer loop = 1; 
