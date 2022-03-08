@@ -5,12 +5,13 @@ class my_transaction  extends uvm_sequence_item;
 		rand logic [DSIZE-1:0] wdata; 
 		rand logic winc; 
 		rand logic rinc; 
+		rand logic rrst_n, wrst_n; 
 	//outputs 
 		logic [DSIZE-1:0] rdata; 
 		logic wfull; 
 		logic rempty; 
-		logic wclk, wrst_n; 
-		logic rclk, rrst_n; 
+		logic wclk; 
+		logic rclk; 
 		
 	function new (string name = "");
 		super.new(name); 
@@ -31,11 +32,29 @@ class my_transaction  extends uvm_sequence_item;
 	
 endclass: my_transaction 
 
+class reset_seq extends uvm_sequence #(my_transaction); 
+	`uvm_object_utils(reset_seq) 
+	
+	function new (string name = "reset_seq"); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		repeat(2) begin 
+			req = my_transaction::type_id::create("req"); 
+			start_item(req); 
+			assert(req.randomize() with {rinc == 0; winc == 0; wdata == 0; rrst_n == 0; wrst_n == 0;});
+			finish_item(req); 
+		end 
+	endtask: body 
+
+endclass: reset_seq  
+
 //Sequence to do nothing, remain idle, no write, no read
 class idle_seq extends uvm_sequence #(my_transaction);
   	`uvm_object_utils(idle_seq)
 	
-	function new (string name = ""); 
+	function new (string name = "idle_seq"); 
 		super.new(name); 
 	endfunction: new 
 
@@ -44,7 +63,7 @@ class idle_seq extends uvm_sequence #(my_transaction);
 			req = my_transaction::type_id::create("req");
             start_item(req);
 
-           if (!req.randomize() with {rinc == 0; winc == 0; wdata == 0;}) begin
+           if (!req.randomize() with {rinc == 0; winc == 0; wdata == 0; rrst_n == 1; wrst_n == 1;}) begin
            `uvm_error("Idle", "Randomize failed.");
            end
 		   
@@ -66,7 +85,7 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 		req = my_transaction::type_id::create("req");
       repeat (1) begin 
 			start_item(req); 
-			assert(req.randomize() with {rinc == 0; winc == 1;wdata <= 255;}); 
+			assert(req.randomize() with {rinc == 0; winc == 1; wdata <= 255; rrst_n == 1; wrst_n == 1;}); 
 			finish_item(req);
 		end 
 	endtask: body 

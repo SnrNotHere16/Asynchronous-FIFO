@@ -8,9 +8,9 @@ Ran on EDA Playground: Tools&Simulators: Aldec Riviera Pro 2020.04
 output 
 # KERNEL: UVM_INFO @ 0: reporter [RNTST] Running test my_test...
 # KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 10: uvm_test_top.env.scoreboard [Monitor:Write] 
-# KERNEL:  winc 	x
-# KERNEL:  rinc 	x
-# KERNEL:  wdata 	x
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
 # KERNEL:  rdata 	x
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
@@ -20,9 +20,9 @@ output
 # KERNEL:  rrst_n 	0
 # KERNEL: 
 # KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 30: uvm_test_top.env.scoreboard [Monitor:Write] 
-# KERNEL:  winc 	x
-# KERNEL:  rinc 	x
-# KERNEL:  wdata 	x
+# KERNEL:  winc 	0
+# KERNEL:  rinc 	0
+# KERNEL:  wdata 	0
 # KERNEL:  rdata 	x
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
@@ -34,7 +34,7 @@ output
 # KERNEL: UVM_INFO /home/runner/my_scoreboard.svh(15) @ 50: uvm_test_top.env.scoreboard [Monitor:Write] 
 # KERNEL:  winc 	1
 # KERNEL:  rinc 	0
-# KERNEL:  wdata 	63
+# KERNEL:  wdata 	4
 # KERNEL:  rdata 	x
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
@@ -47,7 +47,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -59,7 +59,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -71,7 +71,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -83,7 +83,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -95,7 +95,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -107,7 +107,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -119,7 +119,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -131,7 +131,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -143,7 +143,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	1
 # KERNEL:  wclk 	1
@@ -155,7 +155,7 @@ output
 # KERNEL:  winc 	0
 # KERNEL:  rinc 	0
 # KERNEL:  wdata 	0
-# KERNEL:  rdata 	63
+# KERNEL:  rdata 	4
 # KERNEL:  wfull 	0
 # KERNEL:  rempty 	0
 # KERNEL:  wclk 	1

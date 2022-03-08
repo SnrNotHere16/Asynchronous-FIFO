@@ -21,7 +21,7 @@ package  my_testbench_pkg;
 			driver = my_driver::type_id::create("driver", this); 
 			monitor = my_monitor::type_id::create("monitor", this); 
 			sequencer =
-        uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
+			uvm_sequencer#(my_transaction)::type_id::create("sequencer", this);
 		endfunction: build_phase 
 		
 		//In UVM connect phase, we connect the sequencer to the driver. 
@@ -67,15 +67,18 @@ package  my_testbench_pkg;
 			//for some reason the order here matters 
 			//the handles should be initialized first
 			//then call onto the factory 
-          	single_write_seq seq0; 
-			idle_seq seq1;
-          	seq0 = single_write_seq::type_id::create("seq0");
-			seq1 = idle_seq::type_id::create("seq1"); 
+			reset_seq seq0; 
+          	single_write_seq seq1; 
+			idle_seq seq2;
+			seq0 = reset_seq::type_id::create("seq0");
+          	seq1 = single_write_seq::type_id::create("seq1");
+			seq2 = idle_seq::type_id::create("seq2"); 
 			
 			//We raise objection to keep the test from completing 
 			phase.raise_objection(this); 
 			seq0.start(env.agent.sequencer); 
-			seq1.start(env.agent.sequencer);
+			seq1.start(env.agent.sequencer); 
+			seq2.start(env.agent.sequencer);
 			//We drop objection to allow the test to complete 
 			phase.drop_objection(this); 
 		endtask: run_phase
