@@ -206,6 +206,24 @@ class rand_seq_nr extends uvm_sequence#(my_transaction);
 	
 endclass: rand_seq_nr
 
+//Sequence to randomize but no reset and winc != rinc
+class rand_seq_nr extends uvm_sequence#(my_transaction); 
+	`uvm_object_utils(rand_seq_nr) 
+	integer loop = 1; 
+	function new (string name = "rand_seq_nr"); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req"); 
+		repeat (loop) begin 
+			start_item(req); 
+			assert (req.randomize() with {winc != rinc; wdata <= 255; rrst_n == 1; wrst_n == 1;});
+			finish_item(req);
+		end 
+	endtask: body
+	
+endclass: rand_seq_nr
 //Sequence to randomize but no reset and winc is randomzied
 class winc_rand_seq_nr extends uvm_sequence#(my_transaction); 
 	`uvm_object_utils(winc_rand_seq_nr) 
