@@ -32,6 +32,7 @@ class my_transaction  extends uvm_sequence_item;
 	
 endclass: my_transaction 
 
+//Sequence to trigger the reset
 class reset_seq extends uvm_sequence #(my_transaction); 
 	`uvm_object_utils(reset_seq) 
 	
@@ -60,7 +61,6 @@ class idle_seq extends uvm_sequence #(my_transaction);
 		repeat(10) begin
 			req = my_transaction::type_id::create("req");
             start_item(req);
-
            if (!req.randomize() with {rinc == 0; winc == 0; wdata == 0; rrst_n == 1; wrst_n == 1;}) begin
            `uvm_error("Idle", "Randomize failed.");
            end
@@ -101,7 +101,7 @@ class single_read_seq extends uvm_sequence#(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (1)begin 
 			start_item(req); 
-			assert(req.randomize() with {rinc == 1; winc == 0; wdata <= 0;});
+			assert(req.randomize() with {rinc == 1; winc == 0; wdata <= 0; rrst_n == 1; wrst_n == 1;});
 			finish_item(req); 
 		end 
 	endtask: body 
@@ -120,7 +120,7 @@ class full_write_seq extends uvm_sequence #(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (17) begin 
 			start_item(req); 
-			assert (req.randomize() with {rinc == 0; winc == 1; wdata <= 255;}); 
+			assert (req.randomize() with {rinc == 0; winc == 1; wdata <= 255; rrst_n == 1; wrst_n == 1;}); 
 			finish_item(req); 
 		end 
 	endtask: body
@@ -139,7 +139,7 @@ class empty_read_seq extends uvm_sequence #(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (71) begin 
 			start_item(req); 
-			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255;}); 
+			assert (req.randomize()with {rinc == 1; winc == 0; wdata <= 255; rrst_n == 1; wrst_n ==1;}); 
 			finish_item(req);
 		end 
 	endtask: body 
