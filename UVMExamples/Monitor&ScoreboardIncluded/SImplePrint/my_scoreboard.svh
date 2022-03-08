@@ -7,6 +7,10 @@ class my_scoreboard extends uvm_scoreboard;
 	covergroup my_transaction_c; 
 		winc_cp: coverpoint i.winc; 
 		rinc_cp: coverpoint i.rinc; 
+		rrst_n_cp: coverpoint i.rrst_n; 
+		wrst_n_cp: coverpoint i.wrst_n;
+		wfull_cp: coverpoint i.wfull; 
+		rempty: coverpoint i.rempty;
 	endgroup: my_transaction_c
 	
 	function new (string name = "my_scoreboard", uvm_component parent);  
