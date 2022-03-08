@@ -18,6 +18,7 @@ class my_scoreboard extends uvm_scoreboard;
 		super.build_phase(phase); 
 		m_analysis_imp = new ("m_analysis_imp", this); 
 	endfunction: build_phase
+	
 
 	function write (my_transaction item); 
 			i = item; 

@@ -79,6 +79,7 @@ package  my_testbench_pkg;
 			seq0.start(env.agent.sequencer); 
 			seq1.start(env.agent.sequencer); 
 			seq2.start(env.agent.sequencer);
+			//env.scoreboard.outpu(); 
 			//We drop objection to allow the test to complete 
 			phase.drop_objection(this); 
 		endtask: run_phase
