@@ -2,10 +2,11 @@ class my_scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(my_scoreboard) 
 	
 	uvm_analysis_imp #(my_transaction, my_scoreboard) m_analysis_imp; 
-	my_transaction item_s; 
+	my_transaction i; 
 	
 	covergroup my_transaction_c; 
-		T: coverpoint item_s.winc; 
+		winc_cp: coverpoint i.winc; 
+		rinc_cp: coverpoint i.rinc; 
 	endgroup: my_transaction_c
 	
 	function new (string name = "my_scoreboard", uvm_component parent);  
@@ -19,9 +20,8 @@ class my_scoreboard extends uvm_scoreboard;
 	endfunction: build_phase
 
 	function write (my_transaction item); 
-			item_s = item; 
+			i = item; 
 			my_transaction_c.sample(); 
-          //$display("Coverage = %f", my_transaction_c.get_coverage());
 			`uvm_info("Monitor:Write", item.convert2string(), UVM_LOW)
 	endfunction: write 
 	
