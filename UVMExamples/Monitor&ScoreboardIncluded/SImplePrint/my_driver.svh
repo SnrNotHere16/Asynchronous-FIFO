@@ -15,15 +15,6 @@ class my_driver extends uvm_driver #(my_transaction);
   endfunction: build_phase
   
   task run_phase (uvm_phase phase); 
-	//First toggle reset 
-	/*
-	 dut_vif.wrst_n = 0;
-     dut_vif.rrst_n = 0; 
-    repeat (2) @(posedge dut_vif.wclk);
-    #1;
-    dut_vif.wrst_n = 1;
-    dut_vif.rrst_n = 1;  
-	*/
 	//Now drive normal traffc 
 		forever begin 
 			seq_item_port.get_next_item(req); 
