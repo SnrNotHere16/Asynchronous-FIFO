@@ -90,6 +90,27 @@ class single_write_seq extends uvm_sequence#(my_transaction);
 	
 endclass: single_write_seq
 
+//Sequence to perform multiple write on the FIFO
+class multi_write_seq extends uvm_sequence#(my_transaction); 
+	`uvm_object_utils(multi_write_seq) 
+	integer loop = 1; 
+	
+	function new(string name = "multi_write_seq"); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req");
+      repeat (loop) begin 
+			start_item(req); 
+			assert(req.randomize() with {rinc == 0; winc == 1; wdata <= 255; rrst_n == 1; wrst_n == 1;}); 
+			finish_item(req);
+		end 
+	endtask: body 
+	
+endclass: multi_write_seq
+
+//Sequence to perform a single read on the FIFO 
 class single_read_seq extends uvm_sequence#(my_transaction); 
 	`uvm_object_utils(single_read_seq) 
 	
@@ -107,6 +128,25 @@ class single_read_seq extends uvm_sequence#(my_transaction);
 	endtask: body 
 
 endclass: single_read_seq
+
+class multi_read_seq extends uvm_sequence#(my_transaction); 
+	`uvm_object_utils(multi_read_seq) 
+	integer loop = 1; 
+	
+	function new (string name = "multi_read_seq"); 
+		super.new(name); 
+	endfunction: new 
+	
+	task body; 
+		req = my_transaction::type_id::create("req"); 
+		repeat (loop)begin 
+			start_item(req); 
+			assert(req.randomize() with {rinc == 1; winc == 0; wdata <= 0; rrst_n == 1; wrst_n == 1;});
+			finish_item(req); 
+		end 
+	endtask: body 
+
+endclass: multi_read_seq
 
 //Seqence to perfom full write on the FIFO 
 class full_write_seq extends uvm_sequence #(my_transaction); 
