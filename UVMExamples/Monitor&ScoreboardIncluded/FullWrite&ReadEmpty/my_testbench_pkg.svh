@@ -69,13 +69,12 @@ package  my_testbench_pkg;
 			//then call onto the factory 
 			reset_seq seq0; 
           	full_write_seq seq1; 
-		    multi_read_seq seq2; 
+		    empty_read_seq seq2; 
 			idle_seq seq3;  
 			seq0 = reset_seq::type_id::create("seq0");
           	seq1 = full_write_seq::type_id::create("seq1");
-			seq2 = multi_read_seq::type_id::create("seq2");  
+			seq2 = empty_read_seq::type_id::create("seq2");  
 			seq3 = idle_seq::type_id::create("seq3");
-			seq2.loop = 4; 
 			//We raise objection to keep the test from completing 
 			phase.raise_objection(this); 
 			seq0.start(env.agent.sequencer); 
