@@ -120,7 +120,7 @@ class single_read_seq extends uvm_sequence#(my_transaction);
 	
 	task body; 
 		req = my_transaction::type_id::create("req"); 
-		repeat (1)begin 
+		repeat (4)begin 
 			start_item(req); 
 			assert(req.randomize() with {rinc == 1; winc == 0; wdata <= 0; rrst_n == 1; wrst_n == 1;});
 			finish_item(req); 

@@ -68,17 +68,20 @@ package  my_testbench_pkg;
 			//the handles should be initialized first
 			//then call onto the factory 
 			reset_seq seq0; 
-          	single_write_seq seq1; 
-			idle_seq seq2;
+          	full_write_seq seq1; 
+		    multi_read_seq seq2; 
+			idle_seq seq3;  
 			seq0 = reset_seq::type_id::create("seq0");
-          	seq1 = single_write_seq::type_id::create("seq1");
-			seq2 = idle_seq::type_id::create("seq2"); 
-			
+          	seq1 = full_write_seq::type_id::create("seq1");
+			seq2 = multi_read_seq::type_id::create("seq2");  
+			seq3 = idle_seq::type_id::create("seq3");
+			seq2.loop = 4; 
 			//We raise objection to keep the test from completing 
 			phase.raise_objection(this); 
 			seq0.start(env.agent.sequencer); 
 			seq1.start(env.agent.sequencer); 
 			seq2.start(env.agent.sequencer);
+			seq3.start(env.agent.sequencer); 
 			//env.scoreboard.outpu(); 
 			//We drop objection to allow the test to complete 
 			phase.drop_objection(this); 
