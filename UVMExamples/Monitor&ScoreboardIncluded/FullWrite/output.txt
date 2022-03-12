@@ -1,4 +1,98 @@
-Full Write Output
+
+[2022-03-12 21:40:46 UTC] vlib work && vlog -writetoplevels questa.tops '-timescale' '1ns/1ns' +incdir+$UVM_HOME/src -L $QUESTA_HOME/uvm-1.2 design.sv testbench.sv  && vsim -f questa.tops -batch -do run.do -voptargs=+acc=npr 
+QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+Start time: 16:40:46 on Mar 12,2022
+vlog -writetoplevels questa.tops -timescale 1ns/1ns "+incdir+/playground_lib/uvm-1.2/src" -L /usr/share/questa/questasim//uvm-1.2 design.sv testbench.sv 
+-- Compiling module sync_r2w
+-- Compiling module sync_w2r
+-- Compiling module fifomem
+-- Compiling module rptr_empty
+-- Compiling module wptr_full
+-- Compiling interface fifo1Inter
+** Note: (vlog-2286) design.sv(187): Using implicit +incdir+/usr/share/questa/questasim/uvm-1.2/../verilog_src/uvm-1.2/src from import uvm_pkg
+-- Compiling module fifo1
+-- Importing package /usr/share/questa/questasim//uvm-1.2.uvm_pkg (uvm-1.2 Built-in)
+-- Compiling interface dut_if
+-- Compiling package my_testbench_pkg
+-- Compiling module TestBenchTop
+-- Importing package my_testbench_pkg
+
+Top level modules:
+	TestBenchTop
+End time: 16:40:47 on Mar 12,2022, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+# vsim TestBenchTop -batch -do "run.do" -voptargs="+acc=npr" 
+# Start time: 16:40:47 on Mar 12,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'TestBenchTop', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'my_testbench_pkg', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'dut_if', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'fifo1', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'fifo1Inter', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'sync_r2w', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'sync_w2r', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'fifomem', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'rptr_empty', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: (vopt-10016) Option '-L /usr/share/questa/questasim//uvm-1.2' was detected by vlog for design-unit 'wptr_full', but was not detected by vopt. The vlog option will be ignored.
+# ** Warning: my_scoreboard.svh(27): (vopt-2250) Function "write" has no return value assignment.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=11.
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading /usr/share/questa/questasim//uvm-1.2.uvm_pkg(fast)
+# Loading work.my_testbench_pkg(fast)
+# Loading /usr/share/questa/questasim//uvm-1.2.questa_uvm_pkg(fast)
+# Loading work.TestBenchTop(fast)
+# Loading work.dut_if(fast__2)
+# Loading work.fifo1(fast)
+# Loading work.fifo1Inter(fast__1)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# ** Warning: (vsim-3764) Stand-alone call to function 'write' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /uvm_pkg::uvm_analysis_imp #(my_testbench_pkg::my_transaction #(8), my_testbench_pkg::my_scoreboard) File: /usr/share/questa/questasim/linux_x86_64/../verilog_src/uvm-1.2/src/tlm1/uvm_analysis_port.svh Line: 114
+# Compiling /tmp/unknown@081630f49e19_dpi_12/linux_x86_64_gcc-4.8.5/exportwrapper.c
+# Loading /tmp/unknown@081630f49e19_dpi_12/linux_x86_64_gcc-4.8.5/vsim_auto_compile.so
+# Loading /usr/share/questa/questasim/uvm-1.2/linux_x86_64/uvm_dpi.so
+# 
+# do run.do
+# UVM_INFO verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test my_test...
@@ -356,6 +450,6 @@ Full Write Output
 # 
 # ** Note: $finish    : /usr/share/questa/questasim/linux_x86_64/../verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 550 ns  Iteration: 75  Instance: /TestBenchTop
-# End time: 20:44:17 on Mar 08,2022, Elapsed time: 0:00:06
+# End time: 16:40:51 on Mar 12,2022, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 12
 Done
