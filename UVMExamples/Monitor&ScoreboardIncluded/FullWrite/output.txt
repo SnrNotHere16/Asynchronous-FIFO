@@ -1,4 +1,4 @@
-
+Full Write Output 
 [2022-03-12 21:40:46 UTC] vlib work && vlog -writetoplevels questa.tops '-timescale' '1ns/1ns' +incdir+$UVM_HOME/src -L $QUESTA_HOME/uvm-1.2 design.sv testbench.sv  && vsim -f questa.tops -batch -do run.do -voptargs=+acc=npr 
 QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
 Start time: 16:40:46 on Mar 12,2022
