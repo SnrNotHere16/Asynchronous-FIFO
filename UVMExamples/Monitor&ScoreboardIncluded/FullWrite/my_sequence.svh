@@ -218,6 +218,7 @@ class wrinc_rand_seq_nr extends uvm_sequence#(my_transaction);
 		req = my_transaction::type_id::create("req"); 
 		repeat (loop) begin 
 			start_item(req); 
+			//unique {rinc,winc); 
 			assert (req.randomize() with {winc != rinc; wdata <= 255; rrst_n == 1; wrst_n == 1;});
 			finish_item(req);
 		end 
