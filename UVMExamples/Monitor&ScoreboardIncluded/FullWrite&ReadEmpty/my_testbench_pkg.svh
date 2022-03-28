@@ -76,6 +76,7 @@ package  my_testbench_pkg;
 			seq2 = empty_read_seq::type_id::create("seq2");  
 			seq3 = idle_seq::type_id::create("seq3");
 			//We raise objection to keep the test from completing 
+			//start is a blocking assignment 
 			phase.raise_objection(this); 
 			seq0.start(env.agent.sequencer); 
 			seq1.start(env.agent.sequencer); 
