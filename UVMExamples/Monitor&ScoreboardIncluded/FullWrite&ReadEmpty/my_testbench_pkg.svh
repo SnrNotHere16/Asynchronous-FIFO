@@ -72,7 +72,7 @@ package  my_testbench_pkg;
 		    empty_read_seq seq2; 
 			idle_seq seq3;  
 			seq0 = reset_seq::type_id::create("seq0");
-          	seq1 = full_write_seq::type_id::create("seq1");
+          		seq1 = full_write_seq::type_id::create("seq1");
 			seq2 = empty_read_seq::type_id::create("seq2");  
 			seq3 = idle_seq::type_id::create("seq3");
 			//We raise objection to keep the test from completing 
