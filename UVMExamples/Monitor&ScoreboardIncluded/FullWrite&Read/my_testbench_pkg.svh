@@ -47,6 +47,7 @@ package  my_testbench_pkg;
 		
 		function void connect_phase (uvm_phase phase); 
 			super.connect_phase(phase); 
+			//imp not export
 			agent.monitor.m_analysis_port.connect(scoreboard.m_analysis_imp);
 		endfunction: connect_phase 
 	endclass: my_env
