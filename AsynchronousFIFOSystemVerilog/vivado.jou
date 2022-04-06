@@ -16,3 +16,53 @@ launch_simulation
 source AsynchronousFIFOTB.tcl
 restart
 run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source AsynchronousFIFOTB.tcl
+restart
+run all
+close_sim
