@@ -4,6 +4,7 @@ An asynchronous FIFO implementation on a FPGA (NEXYS4DDR)
 ![alt text](https://github.com/SnrNotHere16/Asynchronous-FIFO/blob/main/Images/210255.jpg)
 ![alt text](https://github.com/SnrNotHere16/Asynchronous-FIFO/blob/main/Images/IOList.PNG)
 # Block Diagram 
+![alt text](https://github.com/SnrNotHere16/Asynchronous-FIFO/blob/main/Images/FIFOStyle1.PNG)
 ![alt text](https://github.com/SnrNotHere16/Asynchronous-FIFO/blob/main/Images/AsyncFIFOBlock.jpg)
 # Testbench 
 Full testbench 
