@@ -2,8 +2,6 @@ Vivado Simulator 2019.1
 Time resolution is 1 ps
 Checking rdata: expected wdata = 07, rdata = 07
 Checking rdata: expected wdata = 1a, rdata = 1a
-Checking rdata: expected wdata = 07, rdata = 07
-Checking rdata: expected wdata = 1a, rdata = 1a
 Checking rdata: expected wdata = d1, rdata = d1
 Checking rdata: expected wdata = c3, rdata = c3
 Checking rdata: expected wdata = ea, rdata = ea
@@ -34,4 +32,4 @@ Checking rdata: expected wdata = 9b, rdata = 9b
 Checking rdata: expected wdata = b5, rdata = b5
 Checking rdata: expected wdata = cc, rdata = cc
 Checking rdata: expected wdata = 3c, rdata = 3c
-$finish called at time : 8850 ns : File "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" Line 90
+$finish called at time : 69590 ns : File "C:/Users/OAkun/Documents/GitHub/Asynchronous-FIFO/AsynchronousFIFOSystemVerilog/AsynchronousFIFOSystemVerilog.srcs/sim_1/new/AsynchronousFIFOTB.sv" Line 90
