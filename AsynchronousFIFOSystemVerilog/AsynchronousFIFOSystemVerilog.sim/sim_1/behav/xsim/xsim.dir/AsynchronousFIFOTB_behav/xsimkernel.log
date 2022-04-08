@@ -1,7 +1,7 @@
-Running: xsim.dir/AsynchronousFIFOTB_behav/xsimk.exe -simmode gui -wdb AsynchronousFIFOTB_behav.wdb -simrunnum 0 -socket 59690
+Running: xsim.dir/AsynchronousFIFOTB_behav/xsimk.exe -simmode gui -wdb AsynchronousFIFOTB_behav.wdb -simrunnum 0 -socket 53804
 Design successfully loaded
 Design Loading Memory Usage: 5848 KB (Peak: 5848 KB)
-Design Loading CPU Usage: 62 ms
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 7476 KB (Peak: 7476 KB)
-Simulation CPU Usage: 93 ms
+Simulation Memory Usage: 7480 KB (Peak: 7480 KB)
+Simulation CPU Usage: 46 ms

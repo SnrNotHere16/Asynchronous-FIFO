@@ -41,7 +41,7 @@ parameter DSIZE = 8;
     rclk = 1'b0;
 
     fork
-      forever #20ns wclk = ~wclk;
+      forever #50ns wclk = ~wclk;
       forever #10ns rclk = ~rclk;
     join
   end
